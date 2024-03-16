@@ -9,6 +9,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from "@angular/material/card";
+import { MatExpansionModule } from "@angular/material/expansion";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
+import { MatGridListModule } from "@angular/material/grid-list";
+import { MatSelectModule } from "@angular/material/select";
+import { MatStepperModule } from "@angular/material/stepper";
 
 @NgModule({
   declarations: [
@@ -22,7 +29,17 @@ import { MatListModule } from '@angular/material/list';
     MatToolbarModule,
     BrowserAnimationsModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatExpansionModule,
+    MatIconModule,
+    MatCardModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatGridListModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

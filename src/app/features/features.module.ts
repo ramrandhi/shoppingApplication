@@ -8,11 +8,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MobilesComponent } from './mobiles/mobiles.component';
 
 
 @NgModule({
   declarations: [
-    FeaturesComponent
+    FeaturesComponent,
+    MobilesComponent
   ],
   imports: [
     CommonModule,

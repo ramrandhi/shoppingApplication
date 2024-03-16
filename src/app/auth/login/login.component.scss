@@ -1,12 +1,23 @@
-.main-content{
-  text-align: center;
-  justify-content: center;
-  margin-top: auto;
+.login-content {
   padding-top: 20%;
-  
+  border: 1px black;
 }
 
-.submit-button button{
-  margin-top: 15px;
-  background-color: aqua;
+.login-border {
+  justify-content: center;
+  align-items: center;
+}
+
+.username-content,
+.password-div,
+.submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-button button {
+  background-color: #e0dfeb;
+  border-radius: 10%;
+  width: 120px;
 }
