@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 266px;
+    font-size: 23px;
+    padding-top: 20px;
+}
+
+.item-boxes {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: calc(33.33% - 20px);
+}

@@ -59,20 +59,21 @@
 
 .search-bar .input {
   flex: 1;
-  margin: 0 5px; /* Add margin on the sides */
+  margin: 0 5px;
+  /* Add margin on the sides */
   height: 40px;
   border-radius: 5px;
 }
 
 .search-bar .search-icon {
   flex: 0 0 50px;
-    border-radius: 5px;
-    height: 44px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(197 139 26);
-    margin-left: -8px;
+  border-radius: 5px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(197 139 26);
+  margin-left: -8px;
 }
 
 .language {
@@ -107,5 +108,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transform:translateY(-24px);
+  transform: translateY(-24px);
+}
+
+.mat-menu-panel {
+  background-color: #fff;
+  /* Set background color for the menu */
+  border-radius: 5px;
+  /* Optional: Add border radius */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* Optional: Add box shadow */
 }

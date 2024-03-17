@@ -21,10 +21,16 @@
     <span>language</span>
     <mat-icon>arrow_drop_down</mat-icon>
   </div>
-  <div class="accounts">
+  <div class="accounts" [matMenuTriggerFor]="accountMenu">
     <span>accounts</span>
     <mat-icon>arrow_drop_down</mat-icon>
   </div>
+  
+  <mat-menu #accountMenu="matMenu">
+    <button mat-menu-item (click)="navigateToProfile()">Profile</button>
+    <button mat-menu-item>Settings</button>
+    <button mat-menu-item>Sign out</button>
+  </mat-menu>
   <div class="orders">
     <span>orders</span>
   </div>

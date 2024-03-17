@@ -8,13 +8,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { MobilesComponent } from './mobiles/mobiles.component';
+import { ProfilesRoutingModule } from './profiles/profiles-routing.module';
+import { SuperHeadersModule } from '../headers/super-headers/super-headers.module';
+import { SubHeaderModule } from '../headers/sub-header/sub-header.module';
 
 
 @NgModule({
   declarations: [
-    FeaturesComponent,
-    MobilesComponent
+    FeaturesComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +24,9 @@ import { MobilesComponent } from './mobiles/mobiles.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    SuperHeadersModule,
+    SubHeaderModule
   ]
 })
 export class FeaturesModule { }
