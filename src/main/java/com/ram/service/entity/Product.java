@@ -1,6 +1,6 @@
 package com.ram.service.entity;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import org.hibernate.envers.Audited;
 
@@ -33,17 +33,17 @@ public class Product {
     private Integer stockQuantity;
 
     @Column(name = "created_at", nullable = false)
-    private Date createdAt;
+    private LocalDateTime createdAt;
 
     @Column(name = "updated_at")
-    private Date updatedAt;
+    private LocalDateTime updatedAt;
 
 	public Product() {
 		super();
 	}
 
-	public Product(Integer id, String name, String description, Double price, Integer stockQuantity, Date createdAt,
-			Date updatedAt) {
+	public Product(Integer id, String name, String description, Double price, Integer stockQuantity,
+			LocalDateTime createdAt, LocalDateTime updatedAt) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -94,19 +94,19 @@ public class Product {
 		this.stockQuantity = stockQuantity;
 	}
 
-	public Date getCreatedAt() {
+	public LocalDateTime getCreatedAt() {
 		return createdAt;
 	}
 
-	public void setCreatedAt(Date createdAt) {
+	public void setCreatedAt(LocalDateTime createdAt) {
 		this.createdAt = createdAt;
 	}
 
-	public Date getUpdatedAt() {
+	public LocalDateTime getUpdatedAt() {
 		return updatedAt;
 	}
 
-	public void setUpdatedAt(Date updatedAt) {
+	public void setUpdatedAt(LocalDateTime updatedAt) {
 		this.updatedAt = updatedAt;
 	}
 
