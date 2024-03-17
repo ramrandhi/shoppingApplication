@@ -13,15 +13,18 @@ import jakarta.persistence.Table;
 
 @Entity
 @Audited
-@Table(name="Product")
+@Table(name="product")
 public class Product {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    @Column(name = "name", nullable = false)
-    private String name;
+    @Column(name = "company", nullable = false)
+    private String company;
+    
+    @Column(name = "model", nullable = false)
+    private String model;
 
     @Column(name = "description", nullable = false)
     private String description;
@@ -37,21 +40,26 @@ public class Product {
 
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
+    
+    @Column(name = "category")
+    private String category;
 
 	public Product() {
 		super();
 	}
 
-	public Product(Integer id, String name, String description, Double price, Integer stockQuantity,
-			LocalDateTime createdAt, LocalDateTime updatedAt) {
+	public Product(Integer id, String company, String model, String description, Double price, Integer stockQuantity,
+			LocalDateTime createdAt, LocalDateTime updatedAt, String category) {
 		super();
 		this.id = id;
-		this.name = name;
+		this.company = company;
+		this.model = model;
 		this.description = description;
 		this.price = price;
 		this.stockQuantity = stockQuantity;
 		this.createdAt = createdAt;
 		this.updatedAt = updatedAt;
+		this.category = category;
 	}
 
 	public Integer getId() {
@@ -62,12 +70,20 @@ public class Product {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getCompany() {
+		return company;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setCompany(String company) {
+		this.company = company;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
 	}
 
 	public String getDescription() {
@@ -110,9 +126,18 @@ public class Product {
 		this.updatedAt = updatedAt;
 	}
 
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", description=" + description + ", price=" + price
-				+ ", stockQuantity=" + stockQuantity + ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + "]";
+		return "Product [id=" + id + ", company=" + company + ", model=" + model + ", description=" + description
+				+ ", price=" + price + ", stockQuantity=" + stockQuantity + ", createdAt=" + createdAt + ", updatedAt="
+				+ updatedAt + ", category=" + category + "]";
 	}	
 }
