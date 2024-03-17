@@ -19,6 +19,9 @@ import { MatStepperModule } from "@angular/material/stepper";
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 import { FeaturesModule } from './features/features.module';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,8 @@ import { FeaturesModule } from './features/features.module';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
+    HttpClientModule,
     AppRoutingModule,
     MatButtonModule,
     MatIconModule,
@@ -45,7 +50,8 @@ import { FeaturesModule } from './features/features.module';
     MatFormFieldModule,
     MatMenuModule,
     FeaturesModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule,
   ],
   exports: [RouterModule],
   providers: [],

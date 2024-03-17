@@ -1,0 +1,44 @@
+<form #productForm="ngForm" class="form-container">
+    <div class="form-group">
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Company</mat-label>
+            <mat-select [(ngModel)]="product.company" name="company" placeholder="Company" required>
+                <mat-option *ngFor="let bnd of brand; let i=index;" [value]="bnd">
+                    {{ bnd }}
+                </mat-option>
+            </mat-select>
+            <mat-error>Company Name is required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Model</mat-label>
+            <input matInput [(ngModel)]="product.model" name="model" required>
+            <mat-error>Product Model is required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Description</mat-label>
+            <input matInput [(ngModel)]="product.description" name="description" required>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Price</mat-label>
+            <input matInput [(ngModel)]="product.price" name="price" required>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Quantity</mat-label>
+            <input matInput [(ngModel)]="product.stockQuantity" name="stockQuantity" required>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Category</mat-label>
+            <mat-select [(ngModel)]="product.category" name="category" placeholder="Status" required>
+                <mat-option *ngFor="let cat of category; let i=index;" [value]="cat">
+                    {{ cat }}
+                </mat-option>
+            </mat-select>
+            <mat-error>
+                Status Cannot be Empty!
+            </mat-error>
+        </mat-form-field>
+    </div>
+    <button mat-button color="primary" type="submit" [disabled]="productForm.invalid"
+        (click)="saveProductData(product)">Submit</button>
+    <button type="close" (click)="closeDialog()">Close</button>
+</form>
