@@ -13,10 +13,11 @@ const routes: Routes = [
         path: 'dashboard',
         loadChildren: () => import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
       },
-      { path: 'profile', loadChildren: () => import('./profiles/profiles.module').then(m => m.ProfilesModule) }
+      { path: 'profile', loadChildren: () => import('./profiles/profiles.module').then(m => m.ProfilesModule) },
+      { path: 'electronics', loadChildren: () => import('./electronics/electronics.module').then(m => m.ElectronicsModule) },
     ],
   },
-  
+
 ];
 
 @NgModule({

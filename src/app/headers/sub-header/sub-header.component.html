@@ -13,9 +13,16 @@
   <div class="Todays-Deals">
     <span>Today's Deals</span>
   </div>
-  <div class="Electronics">
+  <div class="Electronics" [matMenuTriggerFor]="electronicsMenu">
     <span>Electronics</span>
   </div>
+    
+  <mat-menu #electronicsMenu="matMenu">
+    <button mat-menu-item (click)="navigateToMobiles()">Mobiles</button>
+    <button mat-menu-item (click)="navigateToLaptops()">Laptops</button>
+    <button mat-menu-item>Settings</button>
+    <button mat-menu-item>Sign out</button>
+  </mat-menu>
   <div class="Customer-Service">
     <span>Customer Service</span>
   </div>

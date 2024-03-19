@@ -1,0 +1,17 @@
+.container {
+    overflow-y: auto;
+    // background-image: url('../../assets/background-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .matcards{
+    margin: 50px;
+  }
+  
+  .mat-card {
+    height:400px;
+    width:300px;
+    padding:20px;
+  }

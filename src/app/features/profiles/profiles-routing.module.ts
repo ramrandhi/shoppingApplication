@@ -5,7 +5,7 @@ import { SaveProductsComponent } from './save-products/save-products.component';
 
 const routes: Routes = [
   { path: '', component: ProfilesComponent },
-  { path: 'save-product', component: SaveProductsComponent}
+  { path: 'save-product', component: SaveProductsComponent }
 ];
 
 @NgModule({
