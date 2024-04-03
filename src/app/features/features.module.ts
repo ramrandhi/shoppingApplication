@@ -8,10 +8,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { ProfilesRoutingModule } from './profiles/profiles-routing.module';
 import { SuperHeadersModule } from '../headers/super-headers/super-headers.module';
 import { SubHeaderModule } from '../headers/sub-header/sub-header.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
 import { MatStepperModule } from '@angular/material/stepper';
@@ -23,7 +21,7 @@ import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
-    FeaturesComponent
+    FeaturesComponent,
   ],
   imports: [
     CommonModule,

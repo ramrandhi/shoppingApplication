@@ -4,17 +4,17 @@
   </div>
   <div class="location">
     <span id="location-address">Delivering to Hyderabad</span>
-    <br/>
+    <br />
     <mat-icon>location_on</mat-icon><span>Update Location</span>
   </div>
-  <div class="search-bar" >
-    <span class="all">
+  <div class="search-bar">
+    <div class="all">
       All
-      <mat-icon>arrow_drop_down</mat-icon>
-    </span>
-    <input class="input" type="text" placeholder="Serarch Products">
+      <span class="material-symbols-outlined">arrow_drop_down</span>
+    </div>
+    <input class="input" type="text" placeholder="Search Products">
     <span class="search-icon">
-      <mat-icon>search</mat-icon>
+      <span class="material-symbols-outlined">search</span>
     </span>
   </div>
   <div class="language">
@@ -25,7 +25,7 @@
     <span>accounts</span>
     <mat-icon>arrow_drop_down</mat-icon>
   </div>
-  
+
   <mat-menu #accountMenu="matMenu">
     <button mat-menu-item (click)="navigateToProfile()">Profile</button>
     <button mat-menu-item>Settings</button>
@@ -35,7 +35,8 @@
     <span>orders</span>
   </div>
   <div class="cart">
-    <mat-icon>shopping_cart</mat-icon>
+    <mat-icon class="cartIcon custom-icon">shopping_cart</mat-icon>
     <span>cart</span>
-  </div>
+</div>
+
 </div>

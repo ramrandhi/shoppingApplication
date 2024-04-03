@@ -1,5 +1,5 @@
 <div class="sub-header">
-  <div class="All">
+  <div class="All" (click)="openToggle()">
     <mat-icon>menu</mat-icon>
     <span>All</span>
     <mat-icon>arrow_drop_down</mat-icon>
@@ -16,7 +16,7 @@
   <div class="Electronics" [matMenuTriggerFor]="electronicsMenu">
     <span>Electronics</span>
   </div>
-    
+
   <mat-menu #electronicsMenu="matMenu">
     <button mat-menu-item (click)="navigateToMobiles()">Mobiles</button>
     <button mat-menu-item (click)="navigateToLaptops()">Laptops</button>
@@ -29,7 +29,8 @@
   <div class="Prime">
     <span>Prime</span>
     <mat-icon>arrow_drop_down</mat-icon>
-  </div><div class="New-Releases">
+  </div>
+  <div class="New-Releases">
     <span>New Releases</span>
   </div>
   <div class="Home-Kitchen">
@@ -41,10 +42,22 @@
   <div class="Computers">
     <span>Computers</span>
   </div>
-  <div class="Books">
-    <span>Books</span>
-  </div>
+  <div class="Books">Books</div>
+
+  <ng-template #tooltipTemplateRef>
+    <!-- Your tooltip content here -->
+  </ng-template>
+
   <div class="Groceries">
     <span>Groceries</span>
   </div>
 </div>
+
+
+<mat-sidenav-container class="example-container" *ngIf="toggle">
+  <mat-sidenav #sidenav mode="side" opened="true" class="example-sidenav">
+      <button mat-button class="closeButton" (click)="closeSidenav()"><mat-icon>first_page</mat-icon></button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

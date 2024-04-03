@@ -1,5 +1,15 @@
 .matCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 15px;
-    height: 306px;
-    width: 261px;
+    min-height: 306px;
+    min-width: 261px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }

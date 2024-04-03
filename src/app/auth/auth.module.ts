@@ -11,7 +11,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from "@angular/material/form-field";
 
-
 @NgModule({
   declarations: [
     LoginComponent
@@ -20,12 +19,12 @@ import { MatFormFieldModule } from "@angular/material/form-field";
     CommonModule,
     AuthRoutingModule,
     MatButtonModule,
-    MatIconModule,
     MatToolbarModule,
     BrowserAnimationsModule,
     MatSidenavModule,
     MatListModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatIconModule,
   ]
 })
 export class AuthModule { }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
   styleUrl: './sub-header.component.scss'
 })
 export class SubHeaderComponent implements OnInit {
+  @ViewChild('tooltipTemplateRef') tooltipTemplate: TemplateRef<any> | undefined;
+  toggle: boolean = false;
   constructor(private router: Router) {
 
   }
@@ -20,6 +22,18 @@ export class SubHeaderComponent implements OnInit {
 
   navigateToLaptops() {
     this.router.navigateByUrl('');
+  }
+
+  openToggle() {
+    this.toggle = true;
+  }
+
+  closeSidenav() {
+    this.toggle = false;
+  }
+
+  openDetails(){
+    
   }
 
 }

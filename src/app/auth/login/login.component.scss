@@ -1,23 +1,66 @@
-.login-content {
-  padding-top: 20%;
-  border: 1px black;
-}
-
-.login-border {
-  justify-content: center;
-  align-items: center;
-}
-
-.username-content,
-.password-div,
-.submit-button {
+.container {
+  font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
-  align-items: center;
+  min-height: 350px;
+  margin: 15px;
+
 }
 
-.submit-button button {
-  background-color: #e0dfeb;
-  border-radius: 10%;
-  width: 120px;
+.company {
+  text-align: center;
+  font-weight: bold;
+}
+
+.login-container {
+  width: 300px;
+  min-height: 350px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 1px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container input {
+  width: 300px;
+  font-size: 25px;
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+.continueBtn {
+  margin-top: 10px;
+  text-align: center;
+  min-width: 306px;
+  font: 5px;
+  font-size: 12px;
+  height: 31px;
+  border-radius: 4px;
+  background-color: #f0c755;
+  border: none;
+}
+
+.privacyPolicy {
+  margin-top: 25px;
+  min-width: 306px;
+  font-size: 12px;
+}
+
+.privacyPolicy a {
+  text-decoration: none;
+}
+
+:host ::ng-deep .needHelp {
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+.needHelp a{
+  text-decoration: none;
+}
+
+.horizontal-line {
+  border-top: 0.5px solid black;
+  width: 100%;
+  margin: 10px 0;
 }
