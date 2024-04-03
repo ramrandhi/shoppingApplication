@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ram.service.entity.Product;
 import com.ram.service.productservice.ProductService;
+import com.ram.service.repository.ProductRepository;
 @RestController
 @RequestMapping("/v1/product")
 @CrossOrigin(origins = "http://localhost:4200")
@@ -24,6 +25,9 @@ public class ProductController {
 	
 	@Autowired
 	private ProductService productService;
+	
+	@Autowired
+	private ProductRepository productRepository;
 	
 	@GetMapping("/all")
 	public List<Product> getAllProducts() {
@@ -63,5 +67,9 @@ public class ProductController {
 	public Boolean deleteOrders(@RequestParam(name = "ids") List<Integer> ids) {
 		return productService.delete(ids);
 	}
-
+	
+	@GetMapping("/company")
+    public List<String> getAllproductBrands(@RequestParam(name = "company") String company) {
+        return productRepository.getAllUniqueBrands(company);
+    }
 }
