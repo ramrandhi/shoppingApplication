@@ -5,31 +5,29 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  // loginForm: FormGroup;
+  userName: string = '';
 
   constructor(
     private router: Router,
-    private fb:FormBuilder
+    private fb: FormBuilder
   ) {
-    // this.loginForm;
-   }
-
-  ngOnInit(): void {
-    // this.buildForm();
   }
 
-  // private buildForm(): void {
-  //   this.loginForm = new FormGroup({
-  //     email: new FormControl('', [Validators.required]),
-  //     password: new FormControl('', [Validators.required]),
-  //   });
-  // }
+  ngOnInit(): void {
+  }
+
+  onContinueButtonClicked() {
+    this.router.navigateByUrl(`/login-password?userName=${this.userName}`);
+  }
 
   submitLoginInfo() {
-    console.log("hello");
     this.router.navigateByUrl('/app/dashboard');
+  }
+
+  redirectToRegistrationPage() {
+    this.router.navigateByUrl('/register');
   }
 }

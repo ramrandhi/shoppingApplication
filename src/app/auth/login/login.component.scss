@@ -4,12 +4,12 @@
   justify-content: center;
   min-height: 350px;
   margin: 15px;
-
 }
 
 .company {
   text-align: center;
   font-weight: bold;
+  color: #fff;
 }
 
 .login-container {
@@ -17,15 +17,25 @@
   min-height: 350px;
   padding: 20px;
   background-color: #fff;
-  border-radius: 1px solid black;
+  border-radius: 10px;
+  border: 1px solid #e7e7e7;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  line-height: 19px;
 }
 
 .login-container input {
-  width: 300px;
-  font-size: 25px;
-  border: 1px solid;
+  width: 290px;
+  height: 27px;
+  font-size: 15px;
+  border: 1px solid #e7e7e7;
   border-radius: 4px;
+  padding: 3px 7px;
+  transition: box-shadow 0.3s, border-color 0s;
+}
+
+.login-container input:active {
+  box-shadow: 0 0 10px skyblue;
+  border-color: #66ccff; /* Brighter border color */
 }
 
 .continueBtn {
@@ -36,8 +46,9 @@
   font-size: 12px;
   height: 31px;
   border-radius: 4px;
-  background-color: #f0c755;
+  background-color: #FFD814;
   border: none;
+  cursor: pointer;
 }
 
 .privacyPolicy {
@@ -55,12 +66,91 @@
   margin-top: 30px;
 }
 
-.needHelp a{
+.needHelp a {
   text-decoration: none;
 }
 
 .horizontal-line {
-  border-top: 0.5px solid black;
-  width: 100%;
-  margin: 10px 0;
+  margin-top: 20px;
+  background-color: transparent;
+  display: block;
+  height: 1px;
+  border-width: 0;
+  border-top: 1px solid #e7e7e7;
+  line-height: 19px;
+  margin-bottom: 14px;
+}
+
+.RandomText {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.AmazonBusiness a {
+  text-decoration: none;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.Register-header {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.divider {
+  flex: 1;
+  border-top: 1px solid #e7e7e7;
+}
+
+.ledivider {
+  margin: 0 10px;
+  color: #fff;
+  font-size: 12px;
+}
+
+.register-container {
+  margin: 10px;
+}
+
+.Register-Btn {
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e7e7e7;
+  padding: 7px;
+  border-radius: 10px;
+  min-width: 322px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, border-color 0s; /* Added border-color to the transition */
+  background-color: transparent;
+  font-size: 12px;
+}
+
+.Register-Btn:active {
+  box-shadow: 0 0 10px skyblue;
+  border-color: #66ccff; /* Brighter border color */
+}
+
+.line {
+  display: block;
+    width: 100%;
+    height: 4px;
+    background-color: transparent;
+    background: -webkit-linear-gradient(to right, #fff, rgba(255, 255, 255, 0), #fff);
+    background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0), #fff);
+    z-index: 1;
+    content: "";
+}
+
+.line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to right, transparent, black, transparent);
+  z-index: -1;
 }
