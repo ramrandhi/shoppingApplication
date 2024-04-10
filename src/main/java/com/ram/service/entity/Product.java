@@ -1,5 +1,6 @@
 package com.ram.service.entity;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import org.hibernate.envers.Audited;
@@ -14,7 +15,10 @@ import jakarta.persistence.Table;
 @Entity
 @Audited
 @Table(name="product")
-public class Product {
+public class Product  implements Serializable{
+	
+	private static final long serialVersionUID = -6265530196155564065L;
+	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
