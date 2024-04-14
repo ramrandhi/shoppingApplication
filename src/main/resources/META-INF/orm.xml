@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+                 http://xmlns.jcp.org/xml/ns/persistence/orm_2_2.xsd"
+                 version="2.2">
+   <!-- <entity class="/common-service/src/main/java/com/common/service/vo/country.java">
+        <attributes>
+            <id name="id"/>
+            <basic name="name"/>
+            <basic name="code"/>
+            <basic name="dialingCode"/>
+        </attributes>
+    </entity>  -->
+    
+    <named-native-query result-set-mapping="countryCodes" name="masterData.getCountryCodes">
+		<query>
+			SELECT * FROM COMMON.COUNTRIES
+		</query>
+	</named-native-query>
+	
+	<sql-result-set-mapping
+		name="countryCodes">
+		<constructor-result
+			target-class="com.common.service.vo.country">
+			<column name="ID" class="java.lang.Integer" />
+			<column name="CODE" class="java.lang.String" />
+			<column name="VALUE" class="java.lang.String" />
+			<column name="DIALING_CODE" class="java.lang.String" />
+		</constructor-result>
+	</sql-result-set-mapping>
+</entity-mappings>
