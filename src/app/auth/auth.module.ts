@@ -11,17 +11,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { RegisterComponent } from './register/register.component';
-import { RouterModule } from '@angular/router';
-import { VerifyRegisterComponent } from './verify-register/verify-register.component';
-import { LoginPasswordComponent } from './login-password/login-password.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     LoginComponent,
     RegisterComponent,
-    VerifyRegisterComponent,
-    LoginPasswordComponent
   ],
   imports: [
     CommonModule,

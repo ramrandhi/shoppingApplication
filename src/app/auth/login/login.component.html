@@ -1,28 +1,54 @@
 <div class="container">
   <div class="sub-container">
     <h1 class="company">amcozie.in</h1>
+    <div class="error-container" *ngIf="isSignInFailed">
+      <span class="error-icon"><mat-icon>warning</mat-icon></span>
+      <span class="error-problem">There was a problem</span>
+      <span class="error-incorrect">Your password is incorrect</span>
+    </div>
     <div class="login-container">
+      <div *ngIf="showHideUserNamePage">
         <h1>Sign in</h1>
         <span>Email or mobile phone number</span>
-        <input />
-        <span><button class="continueBtn" (click)="onContinueButtonClicked()">continue</button></span>
+        <input [(ngModel)]="userName" name="inputField" #inputField="ngModel" (input)="onInputChange()" />
+        <span *ngIf="!isUserNameValid" class="error-message">Invalid number</span>
+        <span><button class="continueBtn" [disabled]="!validateInput()"
+            (click)="onContinueButtonClicked()">continue</button></span>
         <div class="privacyPolicy">
           <span>By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy
               Notice</a>.</span>
         </div>
-        <div class="needHelp"> <a href="#">Need help?</a></div> <!--<mat-icon>play_arrow</mat-icon> -->
+        <div class="needHelp"><a href="#"><mat-icon class="playArrowIcon">play_arrow</mat-icon>Need help?</a></div>
         <div class="horizontal-line"></div>
         <div class="RandomText">Buying for work?</div>
         <div class="AmazonBusiness"><a href="#">Shop on amcozie Business</a></div>
-    </div>
-    <div class="register-container">
-      <div class="Register-header">
-        <div class="divider"></div>
-        <span class="ledivider">New To Amcozie?</span>
-        <div class="divider"></div>
       </div>
-      <button class="Register-Btn" (click)="redirectToRegistrationPage()"><span>Create Your Amcozie
-          Account</span></button>
+      <div *ngIf="showHidePasswordPage">
+        <h1>Sign in</h1>
+        <span class="user-name">{{ userName }} <a (click)="onchangeButtonClicked()">change</a></span>
+        <span>Password <span class="forget-password">Forgot Password?
+          </span></span>
+        <input [ngModel]="password" (ngModelChange)="onPasswordChange($event)" type="password"/>
+        <span><button class="continueBtn" type="submit" (click)="onsignInButtonClicked()">Sign in</button></span>
+        <span class="keep-signIn"><input type="checkbox" /> Keep me signed in. Details </span>
+        <div class="Register-header">
+          <div class="divider"></div>
+          <span class="ledivider">or</span>
+          <div class="divider"></div>
+        </div>
+        <button class="otpButton" (click)="optService()">Get an Otp on your phone</button>
+      </div>
+    </div>
+    <div *ngIf="showHideUserNamePage">
+      <div class="register-container">
+        <div class="Register-header">
+          <div class="divider"></div>
+          <span class="ledivider">New To Amcozie?</span>
+          <div class="divider"></div>
+        </div>
+        <button class="Register-Btn" (click)="redirectToRegistrationPage()"><span>Create Your Amcozie
+            Account</span></button>
+      </div>
     </div>
   </div>
   <div class="more">

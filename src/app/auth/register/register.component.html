@@ -2,25 +2,45 @@
     <div class="sub-container">
         <h1 class="company">amcozie.in</h1>
         <div class="registration-container">
-            <h1 class="create-account-header">Create Account</h1>
-            <span>Your name</span>
-            <input class="input" placeholder="First and last name" />
-            <span>Mobile number</span>
-            <input class="country-code" /> <input class="mobile-number" placeholder="Mobile Number" maxlength="10" />
-            <span>Password</span>
-            <input class="input" placeholder="At least 6 characters" />
-            <span class="password-info">Passwords must be at least 6 characters.</span>
-            <span class="text-info">To verify your number, we will send you a text message with a temporary code.
-                Message and data rates may apply.</span>
-            <button class="verify-mobileNumber" (click)="verifyOtp()">Verify mobile number</button>
-            <div class="horizontal-line"></div>
-            <div class="RandomText">Buying for work?</div>
-            <div class="AmazonBusiness"><a href="#">create free amcozie account</a></div>
-            <div class="horizontal-line"></div>
-            <span>Already have an account? <span class="login-route" (click)="navigateToLogin()">Sign in</span></span>
-            <div class="terms-and-conditions">
-                By creating an account or logging in, you agree to Amcozie's <a href="#">Conditions of Use</a> and <a
-                    href="#">Privacy Policy.</a>
+            <div class="registration" *ngIf="showHideRegistrationPage">
+                <h1 class="create-account-header">Create Account</h1>
+                <span>Your name</span>
+                <input class="input" [(ngModel)]="fullName" placeholder="First and last name" />
+                <span>Mobile number</span>
+                <select class="country-code" [(ngModel)]="selectedCountry">
+                    <option *ngFor="let country of countryDialingData" [ngValue]="country">
+                        {{ country.code }} {{ country.dialing_code }} - {{ country.value }}
+                    </option>
+                </select>
+                <input class="mobile-number" [(ngModel)]="mobileNumber" placeholder="Mobile Number" maxlength="10" />
+                <span>Password</span>
+                <input type="password" class="input" [(ngModel)]="password" placeholder="At least 6 characters" />
+                <span class="password-info">Passwords must be at least 6 characters.</span>
+                <span class="text-info">To verify your number, we will send you a text message with a temporary code.
+                    Message and data rates may apply.</span>
+                <button class="verify-mobileNumber" (click)="verifyMobileNumber()">Verify mobile number</button>
+                <div class="horizontal-line"></div>
+                <div class="RandomText">Buying for work?</div>
+                <div class="AmazonBusiness"><a href="#">create free amcozie account</a></div>
+                <div class="horizontal-line"></div>
+                <span>Already have an account? <span class="login-route" (click)="navigateToLogin()">Sign
+                        in</span></span>
+                <div class="terms-and-conditions">
+                    By creating an account or logging in, you agree to Amcozie's <a href="#">Conditions of Use</a> and
+                    <a href="#">Privacy Policy.</a>
+                </div>
+            </div>
+            <div *ngIf="showHideOtpPage">
+                <h1 class="create-account-header">Verify Mobile Number</h1>
+                <div class="otp-text">A text with a One time password (otp) has been sent to your mobile
+                    number.{{mobileNumber}} <button class="policy" (click)="mobileNumberChangeClicked()">change</button>
+                </div>
+                <div class="otp"><span>Enter OTP: <span class="resend-otp">Resend otp</span></span></div>
+                <input class="otp-input" maxlength="6" [(ngModel)]="otp" />
+                <button class="createBtn" (click)="registerUser()">Create your Amcozie account</button>
+                <div class="instructions">By creating an account or logging in, you agree to Amcozie's<button
+                        class="policy">Conditions of
+                        Use</button> and <button class="policy">Priavacy Policy</button></div>
             </div>
         </div>
     </div>

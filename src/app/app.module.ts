@@ -22,10 +22,13 @@ import { FeaturesModule } from './features/features.module';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthModule } from './auth/auth.module';
+import { MatdialoguepopupComponent } from './pop-up/matdialoguepopup/matdialoguepopup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    MatdialoguepopupComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +54,8 @@ import { HttpClientModule } from '@angular/common/http';
     FeaturesModule,
     RouterModule.forRoot(routes),
     FormsModule,
+    AuthModule,
+    HttpClientModule
   ],
   exports: [RouterModule],
   providers: [],

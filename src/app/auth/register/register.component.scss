@@ -1,152 +1,229 @@
 .container {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    min-height: 350px;
-    margin: 15px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  min-height: 350px;
+  margin: 15px;
 }
 
 .company {
-    text-align: center;
-    font-weight: bold;
-    font-size: 24px;
-    color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
 }
 
 .registration-container {
-    display: inline-table;
-    width: 300px;
-    min-height: 350px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    border: 1px solid #e7e7e7;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    line-height: 19px;
-    font-size: 12px;
-    font-weight: bold;
+  display: inline-table;
+  width: 300px;
+  min-height: 250px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #e7e7e7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  line-height: 19px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .registration-container .create-account-header {
-    // font-weight: bold;
-    font-size: 30px;
+  // font-weight: bold;
+  font-size: 30px;
 }
 
 .registration-container .input {
-    width: 290px;
-    height: 27px;
-    font-size: 15px;
-    border: 1px solid #e7e7e7;
-    border-radius: 4px;
-    padding: 3px 7px;
-    transition: box-shadow 0.3s, border-color 0s;
+  width: 290px;
+  height: 27px;
+  font-size: 15px;
+  border: 1px solid #e7e7e7;
+  border-radius: 4px;
+  padding: 3px 7px;
+  transition: box-shadow 0.3s, border-color 0s;
+  outline: none;
 }
 
-.registration-container span {
-    display: flex;
+.registration-container .input:focus {
+  border-color: #8cacec;
+  box-shadow: 0 0 5px #8cacec;
+}
+
+
+.registration span {
+  display: flex;
 }
 
 .country-code {
-    width: 50px;
-    margin: 11px 16px 7px 8px;
-    height: 27px;
-    border-radius: 4px;
-    border: 1px solid #e7e7e7;
-    transition: box-shadow 0.3s, border-color 0s;
+  width: 62px;
+  margin: 11px 16px 7px 8px;
+  height: 27px;
+  border-radius: 4px;
+  border: 1px solid #e7e7e7;
+  transition: box-shadow 0.3s, border-color 0s;
+  font-size: 10px;
+  outline: none;
+}
+
+.country-code:focus {
+  border-color: #8cacec;
+  box-shadow: 0 0 5px #8cacec;
 }
 
 .mobile-number {
-    width: 200px;
-    height: 27px;
-    border-radius: 4px;
-    padding: 1px 7px;
-    border: 1px solid #e7e7e7;
-    transition: box-shadow 0.3s, border-color 0s;
+  min-width: 200px;
+  height: 27px;
+  border-radius: 4px;
+  padding: 1px 7px;
+  border: 1px solid #e7e7e7;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  outline: none;
+}
+
+.mobile-number:focus {
+  border-color: #8cacec;
+  box-shadow: 0 0 5px #8cacec;
 }
 
 .password-info {
-    font-size: 12px;
-    font-weight: lighter;
+  font-size: 12px;
+  font-weight: lighter;
 }
 
 .text-info {
-    font-size: 12px;
-    font-weight: lighter;
-    margin: 25px 0px 0px 0px;
+  font-size: 12px;
+  font-weight: lighter;
+  margin: 25px 0px 0px 0px;
 }
 
 .verify-mobileNumber {
-    margin-top: 10px;
-    text-align: center;
-    min-width: 306px;
-    font: 5px;
-    font-size: 12px;
-    height: 31px;
-    border-radius: 4px;
-    background-color: #FFD814;
-    border: none;
-    cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+  min-width: 306px;
+  font: 5px;
+  font-size: 12px;
+  height: 31px;
+  border-radius: 4px;
+  background-color: #FFD814;
+  border: none;
+  cursor: pointer;
 }
 
 .horizontal-line {
-    margin-top: 20px;
-    background-color: transparent;
-    display: block;
-    height: 1px;
-    border-width: 0;
-    border-top: 1px solid #e7e7e7;
-    line-height: 19px;
-    margin-bottom: 14px;
-  }
+  margin-top: 20px;
+  background-color: transparent;
+  display: block;
+  height: 1px;
+  border-width: 0;
+  border-top: 1px solid #e7e7e7;
+  line-height: 19px;
+  margin-bottom: 14px;
+}
 
 .RandomText {
-    margin-top: 15px;
-    font-weight: bold;
-    font-size: 12px;
-  }
-  
-  .AmazonBusiness a {
-    text-decoration: none;
-    font-size: 12px;
-    margin-top: 10px;
-    font-weight: lighter;
-  }
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 12px;
+}
 
-  .line {
-    display: block;
-      width: 100%;
-      height: 4px;
-      background-color: transparent;
-      background: -webkit-linear-gradient(to right, #fff, rgba(255, 255, 255, 0), #fff);
-      background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0), #fff);
-      z-index: 1;
-      content: "";
-  }
-  
-  .line::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background: linear-gradient(to right, transparent, black, transparent);
-    z-index: -1;
-  }
+.AmazonBusiness a {
+  text-decoration: none;
+  font-size: 12px;
+  margin-top: 10px;
+  font-weight: lighter;
+}
 
-  .site-data .class {
-    border: 1px solid #e7e7e7;
-  }
+.line {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  background: -webkit-linear-gradient(to right, #fff, rgba(255, 255, 255, 0), #fff);
+  background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0), #fff);
+  z-index: 1;
+  content: "";
+}
 
-  .registration-container a{
-    text-decoration: none;
-  }
+.line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to right, transparent, black, transparent);
+  z-index: -1;
+}
 
-  .registration-container .terms-and-conditions {
-    margin-top: 20px;
-  }
+.site-data .class {
+  border: 1px solid #e7e7e7;
+}
 
-  .login-route {
-    cursor: pointer;
-  }
-  
+.registration-container a {
+  text-decoration: none;
+}
+
+.registration-container .terms-and-conditions {
+  margin-top: 20px;
+}
+
+.login-route {
+  cursor: pointer;
+}
+
+.registration-container .create-account-header {
+  // font-weight: bold;
+  font-size: 30px;
+}
+
+.otp-text {
+  font-weight: lighter;
+}
+
+.change-mobile-number {
+  border: none;
+  background-color: #fff;
+  color: blue;
+}
+
+.otp {
+  margin-top: 15px;
+}
+
+.resend-otp {
+  float: right;
+  margin-right: 12px;
+}
+
+.otp-input {
+  width: 291px;
+  height: 26px;
+  border-radius: 5px;
+  padding: 0px 0px 0px 5px;
+  border: 1px solid #e7e7e7;
+  outline: none;
+}
+
+.otp-input:focus {
+  border-color: #8cacec;
+  box-shadow: 0 0 5px #8cacec;
+}
+
+.createBtn {
+  min-width: 300px;
+  min-height: 26px;
+  margin-top: 15px;
+  border-radius: 5px;
+  background-color: #FFD814;
+  border: none;
+}
+
+.instructions {
+  margin-top: 25px;
+}
+
+.policy {
+  border: none;
+  background-color: #fff;
+  color: blue;
+  font-size: 12px;
+}
