@@ -17,4 +17,8 @@ export class SuperHeadersComponent implements OnInit {
   navigateToProfile() {
     this.router.navigateByUrl('/app/profile');
   }
+
+  signOut() {
+    this.router.navigateByUrl('/login');
+  }
 }

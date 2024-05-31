@@ -14,6 +14,13 @@ export class DashboardComponent implements OnInit {
       const isSpecial = params['isSpecial'];
       console.log('isSpecial:', isSpecial);
     });
+
+    // setTimeout(() => {
+    //   const element = document.querySelector('.background-mover') as HTMLElement;
+    //   if (element) {
+    //     element.style.opacity = '0';
+    //   }
+    // }, 1000);
   }
 
   toggleSidebar() {

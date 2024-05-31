@@ -7,12 +7,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { SideNavBarComponent } from './side-nav-bar/side-nav-bar.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { SubHeaderComponent } from './sub-header/sub-header.component';
 
 
 @NgModule({
   declarations: [
-    SideNavBarComponent
+    SideNavComponent,
   ],
   imports: [
     CommonModule,
@@ -22,6 +23,7 @@ import { SideNavBarComponent } from './side-nav-bar/side-nav-bar.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-  ]
+  ],
+  exports: [SideNavComponent]
 })
 export class HeadersModule { }

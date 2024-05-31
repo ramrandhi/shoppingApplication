@@ -4,8 +4,9 @@
   background-color: #333;
   color: white;
   height: 30px;
-  padding: 5px;
+  padding: 3px;
   cursor: pointer;
+  user-select: none;
 }
 
 .item {
@@ -24,16 +25,9 @@
 }
 
 .All:hover {
-  outline: 2px solid white;
+  outline: 1px solid white;
   border-radius: 5px;
 }
-
-// mat-sidenav {
-//   width: 200px;
-//   display: flex;
-//   flex-direction: row;
-//   height: 500px;
-// }
 
 .Best-Sellers {
   display: flex;
@@ -43,7 +37,7 @@
 }
 
 .Best-Sellers:hover {
-  outline: 2px solid white;
+  outline: 1px solid white;
   border-radius: 5px;
 }
 
@@ -55,7 +49,7 @@
 }
 
 .Mobiles:hover {
-  outline: 2px solid white;
+  outline: 1px solid white;
   border-radius: 5px;
 }
 
@@ -67,7 +61,7 @@
 }
 
 .Todays-Deals:hover {
-  outline: 2px solid white;
+  outline: 1px solid white;
   border-radius: 5px;
 }
 
@@ -79,8 +73,27 @@
 }
 
 .Electronics:hover {
-  outline: 2px solid white;
+  outline: 1px solid white;
   border-radius: 5px;
+}
+
+.Electronics .electronics-toggle {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  padding: 10px;
+  min-width: 200px;
+  z-index: 10;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.Electronics:hover .electronics-toggle {
+  display: flex;
+  flex-direction: column;
+  // align-items: flex-start;
 }
 
 .Customer-Service {
@@ -91,7 +104,7 @@
 }
 
 .Customer-Service:hover {
-  outline: 2px solid white;
+  outline: 1px solid white;
   border-radius: 5px;
 }
 
@@ -103,7 +116,7 @@
 }
 
 .Prime:hover {
-  outline: 2px solid white;
+  outline: 1px solid white;
   border-radius: 5px;
 }
 
@@ -115,7 +128,7 @@
 }
 
 .New-Releases:hover {
-  outline: 2px solid white;
+  outline: 1px solid white;
   border-radius: 5px;
 }
 
@@ -127,7 +140,7 @@
 }
 
 .Home-Kitchen:hover {
-  outline: 2px solid white;
+  outline: 1px solid white;
   border-radius: 5px;
 }
 
@@ -139,7 +152,7 @@
 }
 
 .Fashion:hover {
-  outline: 2px solid white;
+  outline: 1px solid white;
   border-radius: 5px;
 }
 
@@ -151,7 +164,7 @@
 }
 
 .Computers:hover {
-  outline: 2px solid white;
+  outline: 1px solid white;
   border-radius: 5px;
 }
 
@@ -163,7 +176,7 @@
 }
 
 .Books:hover {
-  outline: 2px solid white;
+  outline: 1px solid white;
   border-radius: 5px;
 }
 
@@ -175,19 +188,8 @@
 }
 
 .Groceries:hover {
-  outline: 2px solid white;
+  outline: 1px solid white;
   border-radius: 5px;
-}
-
-.example-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  // width: 320px; /* Set your desired width */
-  background-color: #fff; /* Set your desired background color */
-  z-index: 1000; /* Set a high z-index to ensure it's displayed above other content */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a box shadow for a visual effect */
 }
 
 .closeButton {

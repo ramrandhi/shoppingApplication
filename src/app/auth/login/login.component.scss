@@ -15,7 +15,7 @@
 .error-container {
   position: relative;
   /* Make the container a positioning context for the icon */
-  min-height: 100px;
+  min-height: 72px;
   min-width: 300px;
   border: 1px solid rgb(205, 31, 31);
   margin-bottom: 19px;
@@ -44,7 +44,7 @@
   position: absolute;
   right: 50px;
   top: 50%;
-  transform: translateY(-149%);
+  transform: translateY(-128%);
   width: 250px;
   color: red;
   margin-right: -54px;
@@ -56,7 +56,7 @@
   position: absolute;
   right: 50px;
   top: 85%;
-  transform: translateY(-149%);
+  transform: translateY(-110%);
   width: 250px;
   margin-right: -54px;
 }

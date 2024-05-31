@@ -1,20 +1,18 @@
-import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sub-header',
   templateUrl: './sub-header.component.html',
-  styleUrl: './sub-header.component.scss'
+  styleUrls: ['./sub-header.component.scss']
 })
 export class SubHeaderComponent implements OnInit {
-  @ViewChild('tooltipTemplateRef') tooltipTemplate: TemplateRef<any> | undefined;
-  toggle: boolean = false;
-  constructor(private router: Router) {
+  showSideNav: boolean = false;
+  sideNavData: string[] = [];
 
-  }
-  ngOnInit(): void {
+  constructor(private router: Router) {}
 
-  }
+  ngOnInit(): void {}
 
   navigateToMobiles() {
     this.router.navigateByUrl('app/electronics/mobiles');
@@ -24,16 +22,21 @@ export class SubHeaderComponent implements OnInit {
     this.router.navigateByUrl('');
   }
 
-  openToggle() {
-    this.toggle = true;
+  openToggle(button: string) {
+    this.showSideNav = true;
+    if (button === 'All') {
+      this.sideNavData = ['Option 1', 'Option 2', 'Option 3'];
+    } else if (button === 'Mobiles') {
+      this.sideNavData = ['Mobile Option 1', 'Mobile Option 2', 'Mobile Option 3'];
+    }
+    console.log(`Button clicked: ${button}`);
+    console.log(`showSideNav: ${this.showSideNav}`);
+    console.log(`sideNavData: ${this.sideNavData}`);
   }
 
   closeSidenav() {
-    this.toggle = false;
+    this.showSideNav = false;
   }
 
-  openDetails(){
-    
-  }
-
+  openDetails() {}
 }

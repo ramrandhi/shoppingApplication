@@ -10,6 +10,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { SideNavComponent } from '../side-nav/side-nav.component';
+import { HeadersModule } from '../headers.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatIconModule,
     MatListModule,
     MatMenuModule,
-    MatTooltipModule
+    MatTooltipModule,
+    HeadersModule,
   ],
   exports: [SubHeaderComponent]
 })

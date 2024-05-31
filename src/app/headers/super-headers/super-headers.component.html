@@ -21,22 +21,52 @@
     <span>language</span>
     <mat-icon>arrow_drop_down</mat-icon>
   </div>
-  <div class="accounts" [matMenuTriggerFor]="accountMenu">
+  <div class="accounts">
     <span>accounts</span>
     <mat-icon>arrow_drop_down</mat-icon>
+    <ng-container class="toggle">
+      <div class="accounts-toggle">
+        <div class="first-half">
+          <h3 style="font-weight: bold;">Your Lists</h3>
+          <p>Create a Wish List</p>
+          <p>Wish from Any Website</p>
+          <p>Baby Wishlist</p>
+          <p>Discover Your Style</p>
+          <p>Explore Showroom</p>
+          
+        </div>
+        <div class="line"></div>
+        <div class="second-half">
+          <h3 style="font-weight: bold;">Your Account</h3>
+          <p>Your Orders</p>
+          <p>Your Recommendations</p>
+          <p>Your Prime Membership</p>
+          <p>Your Prime Video</p>
+          <p>Your Subscribe & Save Items</p>
+          <p>Memberships & Subscriptions</p>
+          <p>Your Seller Account</p>
+          <p>Content Library</p>
+          <p>Devices</p>
+          <p>Your Free Amazon Business Account</p>
+          <p>Switch Accounts</p>
+          <p (click)="signOut()">Sign Out</p>
+        </div>
+      </div>
+    </ng-container>
   </div>
 
-  <mat-menu #accountMenu="matMenu">
+
+  <!-- <mat-menu #accountMenu="matMenu">
     <button mat-menu-item (click)="navigateToProfile()">Profile</button>
     <button mat-menu-item>Settings</button>
     <button mat-menu-item>Sign out</button>
-  </mat-menu>
+  </mat-menu> -->
   <div class="orders">
     <span>orders</span>
   </div>
   <div class="cart">
     <mat-icon class="cartIcon custom-icon">shopping_cart</mat-icon>
     <span>cart</span>
-</div>
+  </div>
 
 </div>
