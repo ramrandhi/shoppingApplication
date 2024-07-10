@@ -1,22 +1,12 @@
-<mat-sidenav-container class="example-container">
-  <mat-sidenav #sidenav mode="side" [opened]="toggle" class="example-sidenav">
+<mat-sidenav-container class="example-container" *ngIf="toggle">
+  <mat-sidenav #sidenav mode="side" opened="true" class="example-sidenav">
     <div class="close-button-container">
       <button mat-button class="closeButton" (click)="closeSidenav()">
         <mat-icon>first_page</mat-icon>
       </button>
     </div>
-    <div *ngIf="navData" class="sidenav-content">
+    <div *ngIf="navData" [ngClass]="sideNavType" class="sidenav-content">
       <div *ngFor="let item of navData">{{ item }}</div>
     </div>
   </mat-sidenav>
-
-  <mat-sidenav-content>
-    <!-- Main page content goes here -->
-    <div class="main-content">
-      <h1>Main Content</h1>
-      <p>This is the main content of the page.</p>
-      <button mat-button (click)="openToggle('All')">Open All</button>
-      <button mat-button (click)="openToggle('Mobiles')">Open Mobiles</button>
-    </div>
-  </mat-sidenav-content>
 </mat-sidenav-container>

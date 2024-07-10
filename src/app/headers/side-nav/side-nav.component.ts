@@ -9,6 +9,7 @@ export class SideNavComponent {
   @Input() navData: string[] | undefined;
   @Output() close = new EventEmitter<void>();
   toggle: boolean = false;
+  sideNavType: string = '';
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['navData']) {

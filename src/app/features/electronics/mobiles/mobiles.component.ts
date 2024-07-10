@@ -33,12 +33,12 @@ export class MobilesComponent implements OnInit {
     this.mobileService.getAllMobileBrands(this.mobileCompany).subscribe((res) => {
       this.mobileBrands = res;
       console.log(this.mobileBrands);
-    })
+    });
   }
 
   getAllMobiles() {
     this.mobileService.getAllMobiles().subscribe((res) => {
-      res.forEach((mobile : any) => {
+      res.forEach((mobile: Mobile) => {
         if (!this.mobileProperties[mobile.company]) {
           this.mobileProperties[mobile.company] = [];
         }
@@ -48,5 +48,8 @@ export class MobilesComponent implements OnInit {
     });
   }
 
+  getMobilePropertiesKeys(): string[] {
+    return Object.keys(this.mobileProperties);
+  }
 
 }

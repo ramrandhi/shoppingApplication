@@ -15,9 +15,12 @@ const routes: Routes = [
       },
       { path: 'profile', loadChildren: () => import('./profiles/profiles.module').then(m => m.ProfilesModule) },
       { path: 'electronics', loadChildren: () => import('./electronics/electronics.module').then(m => m.ElectronicsModule) },
+      {
+        path: 'cart',
+        loadChildren: () => import('./cart/cart.module').then((m) => m.CartModule),
+      }
     ],
   },
-
 ];
 
 @NgModule({

@@ -1,22 +1,63 @@
 <div class="container">
-  <div class="header">
-    <span style="font-weight: bold;">Electronics</span>
-    <span>Mobiles & Accessories</span>
-    <span>Laptops & Accessories</span>
-    <span>TV & Home Entertainment</span>
-    <span>Audio</span>
-    <span>Cameras</span>
-    <span>Computer peripherals</span>
-    <span>Smart Technology</span>
-    <span>Musical Instruments</span>
-    <span>Office & Stationary</span>
-  </div>
+  <app-electronics></app-electronics>
   <div class="container-body">
     <div class="side-bar">
-      <p>Mobiles</p>
+      <div class="sidebar-header">
+        <span>Category</span>
+        <div class="sidebar-subheader">
+          <span style="margin: 15px 22px;">Electronics</span>
+          <div>
+            <p>Accessories</p>
+            <p>Camera & Photography</p>
+            <p>Car & Vehicle Electronics</p>
+            <p>Computer & Accessories</p>
+            <p>Gps & Accessories</p>
+            <p>Home Audio</p>
+            <p>Home Theatre, TV & Video</p>
+            <p>Mobiles & Accessories</p>
+            <p>Portable Media Players</p>
+            <p>Radio Communication</p>
+            <p>Tablets</p>
+            <p>Telephone & Accessories</p>
+            <p>Warranties</p>
+            <p>eBook Readers & Accessories</p>
+            <p>Wearable Technology</p>
+            <p>General Purpose Batteries & Battery Chargers</p>
+            <p>Headphones, Earbuds & Accessories</p>
+            <p>Power Accessories</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="main-body">
-      <p>Hello</p>
+    <div class="outer-container">
+      <div class="brand-container" *ngFor="let brand of getMobilePropertiesKeys()">
+        <div class="main-page">
+          <h3>{{ brand }}</h3>
+          <div class="mat-card-container">
+            <mat-card class="mat-card" *ngFor="let mobile of mobileProperties[brand]">
+              <img mat-card-image class="matcard-image" src="https://i.imgur.com/AjKEMYi.jpg">
+              <mat-card-content>
+                <div>
+                  <span>{{ mobile.model }}, </span>
+                  <span>{{ mobile.description }}, </span>
+                  <span>{{ mobile.price }}, </span>
+                  <span>{{ mobile.company }}</span>
+                  <!-- Add more properties as needed -->
+                </div>
+              </mat-card-content>
+              <mat-card-actions>
+                <!-- Actions specific to each mobile -->
+              </mat-card-actions>
+              <mat-card-footer>
+                <!-- Footer content specific to each mobile -->
+              </mat-card-footer>
+            </mat-card>
+          </div>
+        </div>
+      </div>
     </div>
+
+
+
   </div>
 </div>

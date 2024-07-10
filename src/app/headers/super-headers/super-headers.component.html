@@ -1,5 +1,5 @@
 <div class="super-header">
-  <div class="logo">
+  <div class="logo" (click)="navigateToDashboard()">
     <span>Amcozie.in</span>
   </div>
   <div class="location">
@@ -21,39 +21,39 @@
     <span>language</span>
     <mat-icon>arrow_drop_down</mat-icon>
   </div>
-  <div class="accounts">
+  <div class="accounts" (click)="navigateToProfile()">
     <span>accounts</span>
     <mat-icon>arrow_drop_down</mat-icon>
     <ng-container class="toggle">
       <div class="accounts-toggle">
         <div class="first-half">
           <h3 style="font-weight: bold;">Your Lists</h3>
-          <p>Create a Wish List</p>
-          <p>Wish from Any Website</p>
-          <p>Baby Wishlist</p>
-          <p>Discover Your Style</p>
-          <p>Explore Showroom</p>
-          
+          <p (click)="createWishList($event)">Create a Wish List</p>
+          <p (click)="wishFromAnyWebsite($event)">Wish from Any Website</p>
+          <p (click)="babyWishlist($event)">Baby Wishlist</p>
+          <p (click)="discoverYourStyle($event)">Discover Your Style</p>
+          <p (click)="exploreShowroom($event)">Explore Showroom</p>
         </div>
         <div class="line"></div>
         <div class="second-half">
           <h3 style="font-weight: bold;">Your Account</h3>
-          <p>Your Orders</p>
-          <p>Your Recommendations</p>
-          <p>Your Prime Membership</p>
-          <p>Your Prime Video</p>
-          <p>Your Subscribe & Save Items</p>
-          <p>Memberships & Subscriptions</p>
-          <p>Your Seller Account</p>
-          <p>Content Library</p>
-          <p>Devices</p>
-          <p>Your Free Amazon Business Account</p>
-          <p>Switch Accounts</p>
-          <p (click)="signOut()">Sign Out</p>
+          <p (click)="goToCartPage($event)">Your Orders</p>
+          <p (click)="yourRecommendations($event)">Your Recommendations</p>
+          <p (click)="yourPrimeMembership($event)">Your Prime Membership</p>
+          <p (click)="yourPrimeVideo($event)">Your Prime Video</p>
+          <p (click)="yourSubscribeSaveItems($event)">Your Subscribe & Save Items</p>
+          <p (click)="membershipsSubscriptions($event)">Memberships & Subscriptions</p>
+          <p (click)="yourSellerAccount($event)">Your Seller Account</p>
+          <p (click)="contentLibrary($event)">Content Library</p>
+          <p (click)="devices($event)">Devices</p>
+          <p (click)="yourFreeAmazonBusinessAccount($event)">Your Free Amazon Business Account</p>
+          <p (click)="switchAccounts($event)">Switch Accounts</p>
+          <p (click)="signOut($event)">Sign Out</p>
         </div>
       </div>
     </ng-container>
   </div>
+  
 
 
   <!-- <mat-menu #accountMenu="matMenu">
@@ -61,7 +61,7 @@
     <button mat-menu-item>Settings</button>
     <button mat-menu-item>Sign out</button>
   </mat-menu> -->
-  <div class="orders">
+  <div class="orders" (click)="goToCartPage($event)">
     <span>orders</span>
   </div>
   <div class="cart">

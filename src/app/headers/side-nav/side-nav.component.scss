@@ -18,7 +18,7 @@
 
 @media (max-width: 480px) {
   .example-container {
-    width: 100%;
+    width: 150px;
   }
 }
 
@@ -50,4 +50,17 @@
 
 .main-content {
   padding: 20px;
+}
+
+.all .sidenav-content div {
+  background-color: rgb(34, 200, 255);
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+/* Styles for 'mobiles' type */
+.mobiles .sidenav-content div {
+  background-color: lightgreen;
+  padding: 10px;
+  margin-bottom: 5px;
 }

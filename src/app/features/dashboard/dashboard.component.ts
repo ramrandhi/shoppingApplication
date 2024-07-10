@@ -10,10 +10,10 @@ export class DashboardComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) { }
   ngOnInit(): void {
-    this.route.queryParams.subscribe(params => {
-      const isSpecial = params['isSpecial'];
-      console.log('isSpecial:', isSpecial);
-    });
+    // this.route.queryParams.subscribe(params => {
+    //   const isSpecial = params['isSpecial'];
+    //   console.log('isSpecial:', isSpecial);
+    // });
 
     // setTimeout(() => {
     //   const element = document.querySelector('.background-mover') as HTMLElement;

@@ -1,5 +1,5 @@
 <div class="sub-header">
-  <div class="All" (click)="openToggle('All')">
+  <div class="All" (click)="openToggle('all')">
     <mat-icon>menu</mat-icon>
     <span>All</span>
     <mat-icon>arrow_drop_down</mat-icon>
@@ -7,7 +7,7 @@
   <div class="Best-Sellers">
     <span>Best Sellers</span>
   </div>
-  <div class="Mobiles" (click)="openToggle('Mobiles')">
+  <div class="Mobiles" (click)="navigateToMobiles()">
     <span>Mobiles</span>
   </div>
   <div class="Todays-Deals">
@@ -15,13 +15,13 @@
   </div>
   <div class="Electronics">
     <span>Electronics</span>
-    <ng-container class="electronics-toggle">
-      <!-- <p>Mobiles</p>
+    <div class="electronics-toggle">
+      <p (click)="navigateToMobiles()">Mobiles</p>
       <p>Laptops</p>
       <p>Settings</p>
-      <p>Sign out</p> -->
-    </ng-container>
-  </div>
+      <p>Sign out</p>
+    </div>
+  </div>  
   <div class="Customer-Service">
     <span>Customer Service</span>
   </div>
@@ -41,7 +41,9 @@
   <div class="Computers">
     <span>Computers</span>
   </div>
-  <div class="Books">Books</div>
+  <div class="Books">
+    <span>Books</span>
+  </div>
   <div class="Groceries">
     <span>Groceries</span>
   </div>
