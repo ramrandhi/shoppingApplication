@@ -30,23 +30,26 @@
       </div>
     </div>
     <div class="outer-container">
-      <div class="brand-container" *ngFor="let brand of getMobilePropertiesKeys()">
+      <div class="brand-container">
         <div class="main-page">
-          <h3>{{ brand }}</h3>
+          <!-- <h3>{{ mobile.brand }}</h3> -->
           <div class="mat-card-container">
-            <mat-card class="mat-card" *ngFor="let mobile of mobileProperties[brand]">
-              <img mat-card-image class="matcard-image" src="https://i.imgur.com/AjKEMYi.jpg">
+            <mat-card class="mat-card" *ngFor="let mobile of mobiles">
+              <img mat-card-image class="matcard-image" [src]="mobile.imageLocation">
               <mat-card-content>
                 <div>
-                  <span>{{ mobile.model }}, </span>
-                  <span>{{ mobile.description }}, </span>
-                  <span>{{ mobile.price }}, </span>
-                  <span>{{ mobile.company }}</span>
+                  <span>{{ mobile.name }} - {{ mobile.color }}</span>
+                  <!-- <span><app-star-ratings [(rating)]="4"></app-star-ratings>
+                  </span>  -->
                   <!-- Add more properties as needed -->
+                  <br />
+                  <div class="product-price">{{ mobile.price | rupee }} <span *ngIf="mobile.oldPrice"><s>{{
+                        mobile.oldPrice }}</s></span> </div>
+                  <span>FREE Delivery by Amcozie</span>
                 </div>
               </mat-card-content>
               <mat-card-actions>
-                <!-- Actions specific to each mobile -->
+              <button class="add-to-cart">Add to cart</button>
               </mat-card-actions>
               <mat-card-footer>
                 <!-- Footer content specific to each mobile -->

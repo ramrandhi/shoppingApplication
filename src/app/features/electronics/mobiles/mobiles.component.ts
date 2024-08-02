@@ -14,9 +14,16 @@ interface MobileProperties {
 })
 export class MobilesComponent implements OnInit {
 
+  mobiles: Array<{
+    name: any, brand: any, model: any, color: any, description: any, oldPrice: any, price: any,
+    stockQuantity: any, createdAt: any, updatedAt: any, category: any, imageLocation: any, id: any
+  }> = [];
+
+  rating: number = 4;
+
   mobileProperties: MobileProperties = {};
   mobileBrands: string[] = [];
-  mobileCompany:string = 'mobile';
+  mobileCompany: string = 'mobile';
 
 
   constructor(private mobileService: MobileServiceService) {
@@ -38,18 +45,19 @@ export class MobilesComponent implements OnInit {
 
   getAllMobiles() {
     this.mobileService.getAllMobiles().subscribe((res) => {
-      res.forEach((mobile: Mobile) => {
-        if (!this.mobileProperties[mobile.company]) {
-          this.mobileProperties[mobile.company] = [];
-        }
-        this.mobileProperties[mobile.company].push(mobile);
-      });
-      console.log(this.mobileProperties);
+      // res.forEach((mobile: Mobile) => {
+      //   if (!this.mobileProperties[mobile.company]) {
+      //     this.mobileProperties[mobile.company] = [];
+      //   }
+      //   this.mobileProperties[mobile.company].push(mobile);
+      // });
+      this.mobiles = res;
+      console.log(this.mobiles);
     });
   }
 
-  getMobilePropertiesKeys(): string[] {
-    return Object.keys(this.mobileProperties);
-  }
+  // getMobilePropertiesKeys(): string[] {
+  //   return Object.keys(this.mobileProperties);
+  // }
 
 }

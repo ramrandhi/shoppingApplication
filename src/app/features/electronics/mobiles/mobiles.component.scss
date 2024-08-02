@@ -74,7 +74,7 @@ html {
   margin: 0 0 5px 35px;
 }
 
-.sidebar-subheader>div>p:hover{
+.sidebar-subheader>div>p:hover {
   color: rgb(211, 162, 71);
   // text-decoration: underline;
 }
@@ -103,18 +103,53 @@ html {
 }
 
 .mat-card {
-  width: 300px;
-  margin: 10px;
+  width: 239px;
+  margin: 5px;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
+}
+
+.mat-card span {
+  color: #0f1111 !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
 }
 
 .matcard-image {
-  min-width: 225px;
-  max-width: 325px;
-  min-height: 300px;
-  max-height: 350px;
+  max-width: 239px;
+  max-height: 200px;
+  margin: 10px 0;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  box-sizing: border-box;
+  font-family: "Amazon Ember", Arial, sans-serif;
 }
 
+.product-price {
+  font-size: 28px;
+  box-sizing: border-box;
+  color: #0f1111;
+  line-height: normal;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  text-transform: none !important;
+}
 
+.add-to-cart {
+  background: #ffd814;
+  border-color: #ffd814;
+  border-radius: 99px;
+  background: 0 0;
+  box-shadow: none;
+  display: block;
+  // position: relative;
+  overflow: hidden;
+  height: 29px;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #ffd814;
+}

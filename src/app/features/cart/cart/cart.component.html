@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="inner-container">
+        <div class="cart-items">
+            <h1>Shopping Cart</h1>
+            <span *ngIf="this.selectedItems === 0">No items selected. <span class="deselect">Select all
+                    items</span></span>
+            <span class="deselect" *ngIf="this.selectedItems !== 0">Deselect all items</span>
+            <div class="border"></div>
+        </div>
+        <div class="sub-total">
+            <span class="no-items-span" *ngIf="this.selectedItems === 0">No items selected</span>
+            <h3 *ngIf="this.selectedItems !== 0">Subtotal ( items): 1,05,779.00</h3>
+            <button class="buy-btn">Proceed to Buy</button>
+        </div>
+    </div>
+</div>

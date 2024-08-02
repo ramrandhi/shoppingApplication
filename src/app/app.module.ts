@@ -24,9 +24,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from './auth/auth.module';
 import { MatdialoguepopupComponent } from './pop-up/matdialoguepopup/matdialoguepopup.component';
-import { SideNavComponent } from './headers/side-nav/side-nav.component';
-import { HeadersModule } from './headers/headers.module';
-import { SubHeaderComponent } from './headers/sub-header/sub-header.component';
 
 @NgModule({
   declarations: [

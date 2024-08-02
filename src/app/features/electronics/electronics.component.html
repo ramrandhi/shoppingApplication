@@ -1,14 +1,305 @@
 <div class="container">
     <div class="header">
-        <span style="font-weight: bold;">Electronics</span>
-        <span>Mobiles & Accessories</span>
-        <span>Laptops & Accessories</span>
-        <span>TV & Home Entertainment</span>
-        <span>Audio</span>
-        <span>Cameras</span>
-        <span>Computer peripherals</span>
-        <span>Smart Technology</span>
-        <span>Musical Instruments</span>
-        <span>Office & Stationary</span>
+        <span style="font-weight: bold; text-decoration: none">Electronics</span>
+        <div class="mobiles-container">
+            <span class="mobiles">Mobiles & Accessories</span>
+            <ng-container class="toggle">
+                <div class="mobiles-toggle">
+                    <div class="first-half">
+                        <span (click)="createWishList($event)"><strong>Mobiles</strong></span>
+                        <span (click)="wishFromAnyWebsite($event)"><strong>Mobile accessories</strong></span>
+                        <span (click)="babyWishlist($event)">Baby Wishlist</span>
+                        <span (click)="discoverYourStyle($event)">Screen guards</span>
+                        <span (click)="exploreShowroom($event)">Power Banks</span>
+                        <span (click)="exploreShowroom($event)">Headsets</span>
+                        <span (click)="exploreShowroom($event)">Data Cables</span>
+                        <span (click)="exploreShowroom($event)">Chargers</span>
+                        <span (click)="exploreShowroom($event)">Selfie Sticks</span>
+                        <span (click)="exploreShowroom($event)">Skin Stickers</span>
+                        <span (click)="exploreShowroom($event)">Internal Batteries</span>
+                        <span (click)="exploreShowroom($event)">Mounts & Stands</span>
+                        <span (click)="exploreShowroom($event)">Lens Kits</span>
+                        <span (click)="exploreShowroom($event)">Replacement Parts</span>
+                    </div>
+                    <div class="second-half">
+                        <span (click)="createWishList($event)"><strong>Mobile brands</strong></span>
+                        <span (click)="wishFromAnyWebsite($event)">Mi</span>
+                        <span (click)="babyWishlist($event)">OnePlus</span>
+                        <span (click)="discoverYourStyle($event)">Samsung</span>
+                        <span (click)="exploreShowroom($event)">Huawei</span>
+                        <span (click)="exploreShowroom($event)">Apple</span>
+                        <span (click)="exploreShowroom($event)">Motorola</span>
+                        <span (click)="exploreShowroom($event)">Nokia</span>
+                        <span (click)="exploreShowroom($event)">Vivo</span>
+                        <span (click)="exploreShowroom($event)">10.or</span>
+                        <span (click)="exploreShowroom($event)">Coolpad</span>
+                        <span (click)="exploreShowroom($event)">Honor</span>
+                        <span (click)="exploreShowroom($event)">Lenovo</span>
+                        <span (click)="exploreShowroom($event)">LG</span>
+                        <span (click)="exploreShowroom($event)">Micromax</span>
+                    </div>
+                    <div class="third-half">
+                        <span (click)="createWishList($event)"><strong>Accessories brand</strong></span>
+                        <span (click)="wishFromAnyWebsite($event)">OnePlus</span>
+                        <span (click)="wishFromAnyWebsite($event)">AmazonBasics</span>
+                        <span (click)="wishFromAnyWebsite($event)">Intex</span>
+                        <span (click)="wishFromAnyWebsite($event)">Ambrane</span>
+                        <span (click)="wishFromAnyWebsite($event)">Lenovo</span>
+                        <span (click)="wishFromAnyWebsite($event)">Spigen</span>
+                        <span (click)="wishFromAnyWebsite($event)">Jabra</span>
+                        <span (click)="wishFromAnyWebsite($event)">Apple</span>
+                        <span (click)="wishFromAnyWebsite($event)">Syska</span>
+                        <span (click)="wishFromAnyWebsite($event)">Boat</span>
+                        <span (click)="wishFromAnyWebsite($event)">Mivi</span>
+                        <span (click)="wishFromAnyWebsite($event)">iVoltaa</span>
+                    </div>
+                    <div class="fourth-half">
+                        <img mat-card-image class="matcard-image" src="\assets\images\toggle-images\image-1.jpg">
+                        <span>Mobiles</span>
+                        <span>see more</span>
+                    </div>
+                    <div class="fifth-half">
+                        <img mat-card-image class="matcard-image" src="\assets\images\toggle-images\image-2.jpg">
+                        <span>Mobiles Accessories</span>
+                        <span>see more</span>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+        <div class="mobiles-container">
+            <span class="laptops">Laptops & Accessories</span>
+            <ng-container class="toggle">
+                <div class="laptops-toggle">
+                    <div class="first-half">
+                        <span (click)="createWishList($event)"><strong>Laptops</strong></span>
+                        <span (click)="wishFromAnyWebsite($event)">Thin and light laptops</span>
+                        <span (click)="babyWishlist($event)">2-in-1 Laptops</span>
+                        <span (click)="discoverYourStyle($event)">Gaming laptops</span>
+                        <span (click)="exploreShowroom($event)">Budget laptops</span>
+                        <br />
+                        <span (click)="exploreShowroom($event)"><strong>Shop by brand</strong></span>
+                        <span (click)="exploreShowroom($event)">Acer</span>
+                        <span (click)="exploreShowroom($event)">Apple</span>
+                        <span (click)="exploreShowroom($event)">Dell</span>
+                        <span (click)="exploreShowroom($event)">HP</span>
+                        <span (click)="exploreShowroom($event)">Lenovo</span>
+                        <span (click)="exploreShowroom($event)">Microsoft Surface</span>
+                        <span (click)="exploreShowroom($event)">Samsung</span>
+                        <span (click)="exploreShowroom($event)">Xiaomi</span>
+                        <br />
+                        <span (click)="exploreShowroom($event)"><strong>Laptop Buying Guide</strong></span>
+                    </div>
+                    <div class="second-half">
+                        <span (click)="createWishList($event)"><strong>Tablets</strong></span>
+                        <span (click)="wishFromAnyWebsite($event)">Lenovo</span>
+                        <span (click)="babyWishlist($event)">Apple</span>
+                        <span (click)="discoverYourStyle($event)">Samsung</span>
+                        <span (click)="exploreShowroom($event)">Micromax</span>
+                        <span (click)="exploreShowroom($event)">iBall</span>
+                        <span (click)="exploreShowroom($event)">PC Accessories</span>
+                        <span (click)="exploreShowroom($event)">Keyboards</span>
+                        <span (click)="exploreShowroom($event)">Mice</span>
+                        <span (click)="exploreShowroom($event)">Laptop Bags</span>
+                        <span (click)="exploreShowroom($event)">PC Speakers</span>
+                        <span (click)="exploreShowroom($event)">Batteries</span>
+                        <span (click)="exploreShowroom($event)">Cables</span>
+                        <span (click)="exploreShowroom($event)">GameZone</span>
+                    </div>
+                    <div class="third-half">
+                        <span (click)="createWishList($event)"><strong>Data storage</strong></span>
+                        <span (click)="wishFromAnyWebsite($event)">Memory cards</span>
+                        <span (click)="babyWishlist($event)">Pen Drives</span>
+                        <span (click)="discoverYourStyle($event)">Hard Drives</span>
+                        <span (click)="exploreShowroom($event)">Solid State Drives</span>
+                        <span (click)="exploreShowroom($event)">Network Attached Storage</span>
+                        <span (click)="exploreShowroom($event)">Shop by brand</span>
+                        <span (click)="exploreShowroom($event)">Samsung</span>
+                        <span (click)="exploreShowroom($event)">Sandisk</span>
+                        <span (click)="exploreShowroom($event)">WD</span>
+                        <span (click)="exploreShowroom($event)">Seagate</span>
+                        <span (click)="exploreShowroom($event)">Strontium</span>
+                        <span (click)="exploreShowroom($event)">Sony</span>
+                        <span (click)="exploreShowroom($event)">HP</span>
+                        <span (click)="exploreShowroom($event)">Kingston</span>
+                    </div>
+                    <div class="fourth-half">
+                        <img mat-card-image class="matcard-image" src="\assets\images\toggle-images\image-3.jpg">
+                        <span>Mobiles</span>
+                        <span>see more</span>
+                    </div>
+                    <div class="fifth-half">
+                        <img mat-card-image class="matcard-image" src="\assets\images\toggle-images\image-4.jpg">
+                        <span>Mobiles Accessories</span>
+                        <span>see more</span>
+                    </div>
+                    <div class="sixth-half">
+                        <img mat-card-image class="matcard-image" src="\assets\images\toggle-images\image-5.jpg">
+                        <span>Mobiles Accessories</span>
+                        <span>see more</span>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+        <div class="mobiles-container">
+            <span class="television">TV & Home Entertainment</span>
+            <ng-container class="toggle">
+                <div class="tv-home-toggle">
+                    <div class="first-half">
+                    </div>
+                    <div class="second-half">
+                    </div>
+                    <div class="third-half">
+                    </div>
+                    <div class="fourth-half">
+                        <img mat-card-image class="matcard-image" src="\assets\images\toggle-images\image-3.jpg">
+                        <span>Mobiles</span>
+                        <span>see more</span>
+                    </div>
+                    <div class="fifth-half">
+                        <img mat-card-image class="matcard-image" src="\assets\images\toggle-images\image-4.jpg">
+                        <span>Mobiles Accessories</span>
+                        <span>see more</span>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+        <div class="mobiles-container">
+            <span class="audio">Audio</span>
+            <ng-container class="toggle">
+                <div class="audio-toggle">
+                    <div class="first-half">
+                    </div>
+                    <div class="second-half">
+                    </div>
+                    <div class="third-half">
+                    </div>
+                    <div class="fourth-half">
+                        <img mat-card-image class="matcard-image" src="\assets\images\toggle-images\image-3.jpg">
+                        <span>Mobiles</span>
+                        <span>see more</span>
+                    </div>
+                    <div class="fifth-half">
+                        <img mat-card-image class="matcard-image" src="\assets\images\toggle-images\image-4.jpg">
+                        <span>Mobiles Accessories</span>
+                        <span>see more</span>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+        <div class="mobiles-container">
+            <span class="camera">Cameras</span>
+            <ng-container class="toggle">
+                <div class="cameras-toggle">
+                    <div class="first-half">
+                    </div>
+                    <div class="second-half">
+                    </div>
+                    <div class="third-half">
+                    </div>
+                    <div class="fourth-half">
+                        <img mat-card-image class="matcard-image" src="\assets\images\toggle-images\image-3.jpg">
+                        <span>Mobiles</span>
+                        <span>see more</span>
+                    </div>
+                    <div class="fifth-half">
+                        <img mat-card-image class="matcard-image" src="\assets\images\toggle-images\image-4.jpg">
+                        <span>Mobiles Accessories</span>
+                        <span>see more</span>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+        <div class="mobiles-container">
+            <span class="computer">Computer peripherals</span>
+            <ng-container class="toggle">
+                <div class="computer-peripherals-toggle">
+                    <div class="first-half">
+                    </div>
+                    <div class="second-half">
+                    </div>
+                    <div class="third-half">
+                    </div>
+                    <div class="fourth-half">
+                        <img mat-card-image class="matcard-image" src="\assets\images\toggle-images\image-3.jpg">
+                        <span>Mobiles</span>
+                        <span>see more</span>
+                    </div>
+                    <div class="fifth-half">
+                        <img mat-card-image class="matcard-image" src="\assets\images\toggle-images\image-4.jpg">
+                        <span>Mobiles Accessories</span>
+                        <span>see more</span>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+        <div class="mobiles-container">
+            <span class="smartTechnology">Smart Technology</span>
+            <ng-container class="toggle">
+                <div class="smart-technology-toggle">
+                    <div class="first-half">
+                    </div>
+                    <div class="second-half">
+                    </div>
+                    <div class="third-half">
+                    </div>
+                    <div class="fourth-half">
+                        <img mat-card-image class="matcard-image" src="\assets\images\toggle-images\image-3.jpg">
+                        <span>Mobiles</span>
+                        <span>see more</span>
+                    </div>
+                    <div class="fifth-half">
+                        <img mat-card-image class="matcard-image" src="\assets\images\toggle-images\image-4.jpg">
+                        <span>Mobiles Accessories</span>
+                        <span>see more</span>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+        <div class="mobiles-container">
+            <span class="muscial">Musical Instruments</span>
+            <ng-container class="toggle">
+                <div class="muscical-toggle">
+                    <div class="first-half">
+                    </div>
+                    <div class="second-half">
+                    </div>
+                    <div class="third-half">
+                    </div>
+                    <div class="fourth-half">
+                        <img mat-card-image class="matcard-image" src="\assets\images\toggle-images\image-3.jpg">
+                        <span>Mobiles</span>
+                        <span>see more</span>
+                    </div>
+                    <div class="fifth-half">
+                        <img mat-card-image class="matcard-image" src="\assets\images\toggle-images\image-4.jpg">
+                        <span>Mobiles Accessories</span>
+                        <span>see more</span>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+        <div class="mobiles-container">
+            <span class="stationary">Office & Stationary</span>
+            <ng-container class="toggle">
+                <div class="office-stationary-toggle">
+                    <div class="first-half">
+                    </div>
+                    <div class="second-half">
+                    </div>
+                    <div class="third-half">
+                    </div>
+                    <div class="fourth-half">
+                        <img mat-card-image class="matcard-image" src="\assets\images\toggle-images\image-3.jpg">
+                        <span>Mobiles</span>
+                        <span>see more</span>
+                    </div>
+                    <div class="fifth-half">
+                        <img mat-card-image class="matcard-image" src="\assets\images\toggle-images\image-4.jpg">
+                        <span>Mobiles Accessories</span>
+                        <span>see more</span>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
     </div>
 </div>

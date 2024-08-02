@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { SaveProductsComponent } from './save-products/save-products.component';
+import { MasterDataService } from '../../MasterDataService';
 
 @Component({
   selector: 'app-profiles',
@@ -10,15 +11,18 @@ import { SaveProductsComponent } from './save-products/save-products.component';
 })
 export class ProfilesComponent implements OnInit {
 
-  items: String[] = ['Your Orders', 'Login & Security', 'Your Address', 'Payment Options', 'Contact Us'];
+  profileInfo: Array<{ id: any, name: any, description: any, imageLocation: any }> = [];
+
 
   constructor(private router: Router,
-    private openDialog: MatDialog) {
-
+    private openDialog: MatDialog,
+    private masterDataService: MasterDataService) {
   }
 
   ngOnInit(): void {
-
+    this.masterDataService.getAccounts().subscribe((res) => {
+      this.profileInfo = res;
+    });
   }
 
   addProduct() {

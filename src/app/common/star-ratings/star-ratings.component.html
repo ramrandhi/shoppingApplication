@@ -1,0 +1,14 @@
+<div class="star-rating">
+    <ng-container *ngFor="let star of stars; let i = index">
+      <mat-icon
+        [ngClass]="{
+          'star-filled': i < rating,
+          'star-empty': i >= rating
+        }"
+        (click)="onRate(i + 1)"
+      >
+        {{ i < rating ? 'star' : 'star_border' }}
+      </mat-icon>
+    </ng-container>
+  </div>
+  

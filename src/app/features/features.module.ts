@@ -40,7 +40,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatFormFieldModule,
     MatMenuModule,
     SuperHeadersModule,
-    SubHeaderModule
+    SubHeaderModule,
   ]
 })
 export class FeaturesModule { }

@@ -1,31 +1,113 @@
 .container {
-    display: flex;
-    width: 100%;
-    // height: 100%;
-    flex-direction: column;
-    user-select: none;
-  }
-  
-  .header {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 3vh;
-    background-color: transparent;
-    border: 1px solid #e7e7e7;
-    padding: 10px;
-  }
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  user-select: none;
+}
 
-  .header span {
-    margin: 0 15px 0 15px;
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .header span:hover {
-    cursor: pointer;
-    user-select: none;
-    text-decoration: underline;
-    text-decoration-color: orange;
-  }
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 48px;
+  background-color: transparent;
+  border: 1px solid #e7e7e7;
+  position: relative;
+}
+
+.header span {
+  margin: 0 15px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.header span:hover {
+  cursor: pointer;
+  user-select: none;
+  text-decoration: underline;
+  text-decoration-color: #ca8e29;
+  text-decoration-thickness: 1.2px;
+}
+
+.mobiles-container {
+  height: 48px;
+  display: flex;
+  text-align: center;
+}
+
+.mobiles-container .mobiles {
+  display: flex;
+  text-align: center;
+}
+
+.toggle {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.mobiles-toggle,
+.laptops-toggle,
+.tv-home-toggle,
+.audio-toggle,
+.cameras-toggle,
+.computer-peripherals-toggle,
+.smart-technology-toggle,
+.muscical-toggle,
+.office-stationary-toggle {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #e7e7e7;
+  height: 50vh;
+  z-index: 1;
+  padding: 20px 50px;
+}
+
+.mobiles-container:hover .mobiles-toggle,
+.mobiles-container:hover .laptops-toggle,
+.mobiles-container:hover .tv-home-toggle,
+.mobiles-container:hover .audio-toggle,
+.mobiles-container:hover .cameras-toggle,
+.mobiles-container:hover .computer-peripherals-toggle,
+.mobiles-container:hover .smart-technology-toggle,
+.mobiles-container:hover .muscical-toggle,
+.mobiles-container:hover .office-stationary-toggle {
+  display: flex;
+  justify-content: center;
+}
+
+.first-half,
+.second-half,
+.third-half,
+.fourth-half,
+.fifth-half,
+.sixth-half span {
+  padding: 20px 20px;
+}
+
+.first-half span,
+.second-half span,
+.third-half span {
+  display: flex;
+  // align-items: center;
+  justify-content: start;
+  width: 125px;
+}
+
+.fourth-half span,
+.fifth-half span,
+.sixth-half span {
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+}
+
+.matcard-image {
+  height: 300px;
+  width: 250px;
+}
