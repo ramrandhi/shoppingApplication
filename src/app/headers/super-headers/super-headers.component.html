@@ -38,7 +38,7 @@
         <div class="second-half">
           <h3 style="font-weight: bold;">Your Account</h3>
           <p (click)="goToYourAccount($event)">Your Account</p>
-          <p (click)="goToCartPage($event)">Your Orders</p>
+          <p (click)="goToOrdersPage($event)">Your Orders</p>
           <p (click)="yourRecommendations($event)">Your Recommendations</p>
           <p (click)="yourPrimeMembership($event)">Your Prime Membership</p>
           <p (click)="yourPrimeVideo($event)">Your Prime Video</p>
@@ -62,10 +62,10 @@
     <button mat-menu-item>Settings</button>
     <button mat-menu-item>Sign out</button>
   </mat-menu> -->
-  <div class="orders" (click)="goToCartPage($event)">
+  <div class="orders" (click)="goToOrdersPage($event)">
     <span>orders</span>
   </div>
-  <div class="cart">
+  <div class="cart" (click)="goToCartPage($event)">
     <mat-icon class="cartIcon custom-icon">shopping_cart</mat-icon>
     <span>cart</span>
   </div>

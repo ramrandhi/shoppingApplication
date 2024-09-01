@@ -66,6 +66,7 @@
   height: 50vh;
   z-index: 1;
   padding: 20px 50px;
+  // transition: opacity 0.5s ease-in-out 2s, visibility 0s linear 2s;
 }
 
 .mobiles-container:hover .mobiles-toggle,
@@ -86,7 +87,7 @@
 .third-half,
 .fourth-half,
 .fifth-half,
-.sixth-half span {
+.sixth-half {
   padding: 20px 20px;
 }
 
@@ -108,6 +109,6 @@
 }
 
 .matcard-image {
-  height: 300px;
-  width: 250px;
+  height: 250px;
+  width: 200px;
 }

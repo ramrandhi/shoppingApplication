@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MobileServiceService } from './mobile-service.service';
-import { groupBy, mergeMap, toArray } from 'rxjs';
 import { Mobile } from './mobileProperties';
+import { CartService } from '../../cart/cart.service';
+import { Cart } from '../../cart/cart/cart';
 
 interface MobileProperties {
   [key: string]: Mobile[];
@@ -20,13 +21,16 @@ export class MobilesComponent implements OnInit {
   }> = [];
 
   rating: number = 4;
+  CurrentCart: Cart = new Cart;
 
   mobileProperties: MobileProperties = {};
   mobileBrands: string[] = [];
   mobileCompany: string = 'mobile';
 
 
-  constructor(private mobileService: MobileServiceService) {
+  constructor(private mobileService: MobileServiceService,
+              private cartService: CartService
+  ) {
   }
   ngOnInit(): void {
     this.getAllMobiles();
@@ -59,5 +63,12 @@ export class MobilesComponent implements OnInit {
   // getMobilePropertiesKeys(): string[] {
   //   return Object.keys(this.mobileProperties);
   // }
+
+  addToCart(id: number) {
+    this.CurrentCart.productId = id;
+    this.cartService.saveTocart(this.CurrentCart).subscribe((res: Cart) => {
+      console.log('cart created with item successfully');
+    });
+  }
 
 }

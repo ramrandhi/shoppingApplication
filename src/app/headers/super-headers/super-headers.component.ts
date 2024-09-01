@@ -25,13 +25,18 @@ export class SuperHeadersComponent implements OnInit {
 
   goToYourAccount(event: Event) {
     event.stopPropagation();
-    this.router.navigateByUrl('/app/accounts');
+    this.router.navigateByUrl('/app/profile');
   }
 
 
   goToCartPage(event: Event) {
     event.stopPropagation();
-    this.router.navigateByUrl('/app/cart')
+    this.router.navigateByUrl('/app/cart');
+  }
+
+  goToOrdersPage(event: Event) {
+    event.stopPropagation();
+    this.router.navigateByUrl('/app/order');
   }
 
   navigateToDashboard() {
