@@ -2,6 +2,9 @@ server:
   port: 8081
 
 spring:
+  application:
+    name: common-service
+
   datasource:
     url: jdbc:mysql://localhost:3306/common
     username: hcn
@@ -20,3 +23,7 @@ spring:
           auto: update
     mapping-files:
       - classpath:META-INF/orm.xml
+
+  logging:
+    pattern:
+      console: "%d{yyyy-MM-dd HH:mm:ss} %-5level [${spring.application.name}] %logger{36} - %msg%n"

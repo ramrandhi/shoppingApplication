@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.common.service.commonservice.MasterDataService;
+import com.common.service.vo.Account;
 import com.common.service.vo.country;
 
 @RestController
@@ -21,6 +22,11 @@ public class MasterDataController {
 	@GetMapping(value = "/countries")
 	public List<country> masterDataService() {
 		return masterDataService.getAllCountryCodes();
+	}
+	
+	@GetMapping(value = "/account")
+	public List<Account> getAccountDetails() {
+		return masterDataService.getAccountDetails();
 	}
 
 }

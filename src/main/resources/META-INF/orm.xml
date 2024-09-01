@@ -19,6 +19,12 @@
 		</query>
 	</named-native-query>
 	
+	<named-native-query result-set-mapping="accountMasterData" name="masterData.getAccountDetails">
+		<query>
+			SELECT * FROM COMMON.Account
+		</query>
+	</named-native-query>
+	
 	<sql-result-set-mapping
 		name="countryCodes">
 		<constructor-result
@@ -27,6 +33,17 @@
 			<column name="CODE" class="java.lang.String" />
 			<column name="VALUE" class="java.lang.String" />
 			<column name="DIALING_CODE" class="java.lang.String" />
+		</constructor-result>
+	</sql-result-set-mapping>
+	
+	<sql-result-set-mapping
+		name="accountMasterData">
+		<constructor-result
+			target-class="com.common.service.vo.Account">
+			<column name="ID" class="java.lang.Integer" />
+			<column name="NAME" class="java.lang.String" />
+			<column name="DESCRIPTION" class="java.lang.String" />
+			<column name="IMAGE_LOCATION" class="java.lang.String" />
 		</constructor-result>
 	</sql-result-set-mapping>
 </entity-mappings>

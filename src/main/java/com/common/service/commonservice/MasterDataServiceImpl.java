@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.common.service.repository.MasterDataRepository;
+import com.common.service.vo.Account;
 import com.common.service.vo.country;
 
 @Service
@@ -18,6 +19,11 @@ public class MasterDataServiceImpl implements MasterDataService{
 	public List<country> getAllCountryCodes() {
 		
 		return masterDataRepository.getAllCountryCodes();
+	}
+
+	@Override
+	public List<Account> getAccountDetails() {
+		return masterDataRepository.getAccountDetails();
 	}
 
 }

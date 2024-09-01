@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.common.service.vo.Account;
 import com.common.service.vo.country;
 
 import jakarta.persistence.EntityManager;
@@ -18,6 +19,11 @@ public class MasterDataRepositoryImpl implements MasterDataRepository {
 	public List<country> getAllCountryCodes() {
 		List<country> results = em.createNamedQuery("masterData.getCountryCodes").getResultList();
 				return results;
+	}
+	@Override
+	public List<Account> getAccountDetails() {
+		List<Account> results = em.createNamedQuery("masterData.getAccountDetails").getResultList();
+		return results;
 	}
 
 }
