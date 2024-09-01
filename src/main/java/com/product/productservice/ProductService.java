@@ -1,8 +1,8 @@
-package com.ram.service.productservice;
+package com.product.productservice;
 
 import java.util.List;
 
-import com.ram.service.entity.Product;
+import com.product.entity.Product;
 
 public interface ProductService {
 

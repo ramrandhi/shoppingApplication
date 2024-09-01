@@ -1,4 +1,4 @@
-package com.ram.service.entity;
+package com.product.entity;
 
 import java.io.Serializable;
 
@@ -22,45 +22,61 @@ public class Address implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private Integer Id;
-	@Column(name = "country")
-	private String country;
-	@Column(name = "state")
+	@Column(name = "country_code", nullable = false)
+	private String countryCode;
+	@Column(name = "country_name", nullable = false)
+	private String countryName;
+	@Column(name = "country_short_name", nullable = false)
+	private String countryShortName;
+	@Column(name = "state", nullable = false)
 	private String state;
-	@Column(name = "district")
+	@Column(name = "district", nullable = false)
 	private String district;
-	@Column(name = "town")
+	@Column(name = "town", nullable = false)
 	private String town;
-	@Column(name = "land_mark")
+	@Column(name = "land_mark", nullable = false)
 	private String landMark;
-	@Column(name = "pincode")
+	@Column(name = "pincode", nullable = false)
 	private String pincode;
 	public Address() {
 		super();
 	}
-	
-	public Address(Integer id, String country, String state, String district, String town, String landMark,
-			String pincode) {
+	public Address(Integer id, String countryCode, String countryName, String countryShortName, String state,
+			String district, String town, String landMark, String pincode) {
 		super();
 		Id = id;
-		this.country = country;
+		this.countryCode = countryCode;
+		this.countryName = countryName;
+		this.countryShortName = countryShortName;
 		this.state = state;
 		this.district = district;
 		this.town = town;
 		this.landMark = landMark;
 		this.pincode = pincode;
 	}
-	
 	public Integer getId() {
 		return Id;
 	}
 	public void setId(Integer id) {
 		Id = id;
 	}
-	public String getCountry() {
-		return country;
+	public String getCountryCode() {
+		return countryCode;
 	}
-	public void setCountry(String country) {
-		this.country = country;
+	public void setCountryCode(String countryCode) {
+		this.countryCode = countryCode;
+	}
+	public String getCountryName() {
+		return countryName;
+	}
+	public void setCountryName(String countryName) {
+		this.countryName = countryName;
+	}
+	public String getCountryShortName() {
+		return countryShortName;
+	}
+	public void setCountryShortName(String countryShortName) {
+		this.countryShortName = countryShortName;
 	}
 	public String getState() {
 		return state;
@@ -92,14 +108,10 @@ public class Address implements Serializable{
 	public void setPincode(String pincode) {
 		this.pincode = pincode;
 	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-	
 	@Override
 	public String toString() {
-		return "Address [Id=" + Id + ", country=" + country + ", state=" + state + ", district=" + district + ", town="
+		return "Address [Id=" + Id + ", countryCode=" + countryCode + ", countryName=" + countryName
+				+ ", countryShortName=" + countryShortName + ", state=" + state + ", district=" + district + ", town="
 				+ town + ", landMark=" + landMark + ", pincode=" + pincode + "]";
 	}
-
 }

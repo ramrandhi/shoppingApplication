@@ -1,4 +1,4 @@
-package com.ram.service.productservice;
+package com.product.productservice;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ram.service.entity.Product;
-import com.ram.service.repository.ProductRepository;
+import com.product.entity.Product;
+import com.product.repository.ProductRepository;
 
 @Service
 public class ProductServiceImpl implements ProductService{
@@ -43,7 +43,7 @@ public class ProductServiceImpl implements ProductService{
 	public void deleteProductById(Integer id) throws Exception {
 		Optional<Product> existingProduct = productRepository.findById(id);
 		if(existingProduct.isEmpty() && !existingProduct.isPresent()) {
-			throw new Exception("Product with id "+existingProduct+" is not present");
+			throw new Exception("Product with id " + existingProduct + " is not present");
 		}
 		productRepository.deleteById(id);
 	}

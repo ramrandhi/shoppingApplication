@@ -1,9 +1,9 @@
-package com.ram.service;
+package com.product;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages= {"com.product", "com.service"})
 public class ProductServiceApplication {
 
 	public static void main(String[] args) {

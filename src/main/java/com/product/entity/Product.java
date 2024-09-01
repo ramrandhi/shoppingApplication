@@ -1,4 +1,4 @@
-package com.ram.service.entity;
+package com.product.entity;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -14,46 +14,49 @@ import jakarta.persistence.Table;
 
 @Entity
 @Audited
-@Table(name="product")
-public class Product  implements Serializable{
-	
+@Table(name = "product")
+public class Product implements Serializable {
+
 	private static final long serialVersionUID = -6265530196155564065L;
-	
+
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private Integer id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id", nullable = false)
+	private Integer id;
 
-    @Column(name = "company", nullable = false)
-    private String company;
-    
-    @Column(name = "model", nullable = false)
-    private String model;
+	@Column(name = "company", nullable = false)
+	private String company;
 
-    @Column(name = "description", nullable = false)
-    private String description;
+	@Column(name = "model", nullable = false)
+	private String model;
 
-    @Column(name = "price", nullable = false)
-    private Double price;
+	@Column(name = "description", nullable = false)
+	private String description;
 
-    @Column(name = "stock_quantity", nullable = false)
-    private Integer stockQuantity;
+	@Column(name = "price", nullable = false)
+	private Double price;
 
-    @Column(name = "created_at", nullable = false)
-    private LocalDateTime createdAt;
+	@Column(name = "stock_quantity", nullable = false)
+	private Integer stockQuantity;
 
-    @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
-    
-    @Column(name = "category")
-    private String category;
+	@Column(name = "created_at", nullable = false)
+	private LocalDateTime createdAt;
+
+	@Column(name = "updated_at")
+	private LocalDateTime updatedAt;
+
+	@Column(name = "category")
+	private String category;
+	
+	@Column(name = "image_location", nullable = false)
+	private String imageLocation;
 
 	public Product() {
 		super();
 	}
 
 	public Product(Integer id, String company, String model, String description, Double price, Integer stockQuantity,
-			LocalDateTime createdAt, LocalDateTime updatedAt, String category) {
+			LocalDateTime createdAt, LocalDateTime updatedAt, String category, String imageLocation) {
 		super();
 		this.id = id;
 		this.company = company;
@@ -64,6 +67,7 @@ public class Product  implements Serializable{
 		this.createdAt = createdAt;
 		this.updatedAt = updatedAt;
 		this.category = category;
+		this.imageLocation = imageLocation;
 	}
 
 	public Integer getId() {
@@ -137,11 +141,19 @@ public class Product  implements Serializable{
 	public void setCategory(String category) {
 		this.category = category;
 	}
+	
+	public String getImageLocation() {
+		return imageLocation;
+	}
+	
+	public void setImageLocation(String imageLocation) {
+		this.imageLocation = imageLocation;
+	}
 
 	@Override
 	public String toString() {
 		return "Product [id=" + id + ", company=" + company + ", model=" + model + ", description=" + description
 				+ ", price=" + price + ", stockQuantity=" + stockQuantity + ", createdAt=" + createdAt + ", updatedAt="
-				+ updatedAt + ", category=" + category + "]";
-	}	
+				+ updatedAt + ", category=" + category + ", imageLocation=" + imageLocation + "]";
+	}
 }

@@ -1,4 +1,4 @@
-package com.ram.service.controller;
+package com.product.controller;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ram.service.entity.Product;
-import com.ram.service.productservice.ProductService;
-import com.ram.service.repository.ProductRepository;
+import com.product.entity.Product;
+import com.product.productservice.ProductService;
+import com.product.repository.ProductRepository;
 @RestController
 @RequestMapping("/v1/product")
 @CrossOrigin(origins = "http://localhost:4200")

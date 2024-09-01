@@ -7,6 +7,7 @@ spring:
     username: hcn
     password: admin@123
     driver-class-name: com.mysql.cj.jdbc.Driver
+    
   jpa:
     properties:
       hibernate:
