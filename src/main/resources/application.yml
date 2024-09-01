@@ -1,0 +1,24 @@
+server:
+  port: 8083
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/order
+    username: hcn
+    password: admin@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        show_sql: true
+        format_sql: true
+        envers:
+          enabled: true
+        hbm2ddl:
+          auto: update
+        temp:
+          use_jdbc_metadata_defaults: false
+    mapping-files:
+      - classpath:META-INF/orm.xml
