@@ -24,6 +24,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from './auth/auth.module';
 import { MatdialoguepopupComponent } from './pop-up/matdialoguepopup/matdialoguepopup.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { MatdialoguepopupComponent } from './pop-up/matdialoguepopup/matdialogue
     FormsModule,
     AuthModule,
     HttpClientModule,
+    ToastrModule.forRoot(),
   ],
   exports: [RouterModule],
   providers: [],

@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MobileServiceService } from './mobile-service.service';
 import { Mobile } from './mobileProperties';
 import { CartService } from '../../cart/cart.service';
-import { Cart } from '../../cart/cart/cart';
+import { ToastService } from '../../../common/toast.service';
+import { Cart } from '../../cart/cart.model';
 
 interface MobileProperties {
   [key: string]: Mobile[];
@@ -29,7 +30,8 @@ export class MobilesComponent implements OnInit {
 
 
   constructor(private mobileService: MobileServiceService,
-              private cartService: CartService
+              private cartService: CartService,
+              private toastService: ToastService,
   ) {
   }
   ngOnInit(): void {
@@ -67,6 +69,9 @@ export class MobilesComponent implements OnInit {
   addToCart(id: number) {
     this.CurrentCart.productId = id;
     this.cartService.saveTocart(this.CurrentCart).subscribe((res: Cart) => {
+      if(res) {
+        this.toastService.showSuccess('cart created with item successfully', 'Item Added To Cart');
+      }
       console.log('cart created with item successfully');
     });
   }

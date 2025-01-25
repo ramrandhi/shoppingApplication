@@ -10,11 +10,11 @@ export class MobileServiceService {
   constructor(private http: HttpClient) { }
 
   getAllMobiles(): Observable<any> {
-    return this.http.get('http://localhost:8082/v1/mobile/all');
+    return this.http.get('http://localhost:8082/api/v1/product/all');
   }
 
   getAllMobileBrands(mobileCompany: string): Observable<any> {
-    return this.http.get(`http://localhost:8082/v1/product/company?company=${encodeURIComponent(mobileCompany)}`);
+    return this.http.get(`http://localhost:8082/api/v1/product/company`);
   }
   
 }

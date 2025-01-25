@@ -1,15 +1,46 @@
 <div class="container">
     <div class="inner-container">
         <div class="cart-items">
-            <h1>Shopping Cart</h1>
-            <span *ngIf="this.selectedItems === 0">No items selected. <span class="deselect">Select all
-                    items</span></span>
-            <span class="deselect" *ngIf="this.selectedItems !== 0">Deselect all items</span>
-            <div class="border"></div>
+            <div>
+                <h1>Shopping Cart</h1>
+                <span *ngIf="this.selectedItems === 0">No items selected. <span class="deselect">Select all
+                        items</span></span>
+                <span *ngIf="this.selectedItems === 1">No items selected. <span class="deselect">Select all
+                        items</span></span>
+                <span class="deselect" *ngIf="this.selectedItems !== 0">Deselect all items</span>
+                <span style="float: right; padding-right: 25px;">price</span>
+                <div class="border"></div>
+            </div>
+            <div class="actual-cart-items">
+                <mat-card class="mat-card" *ngFor="let cart of currentCart; let i = index">
+                    <div class="card-container">
+                        <div class="part-1">
+                            <input type="checkbox" (change)="checkboxSelected(cart, $event)">
+                        </div>
+                        <div class="part-2">
+                            <img mat-card-image class="matcard-image" [src]="cart.imageLocation">
+                        </div>
+                        <div class="part-3">
+                            <div class="header"> {{ cart.name }} | {{ cart.description }} </div>
+                            <div class="stock">in stock</div>
+                            <div class="feature"><strong>Colour: </strong> {{ cart.color }}</div>
+                            <div>hello</div>
+                        </div>
+                        <div class="part-4">
+                            <div style="font-size: 17px;"><strong>{{ cart.price | rupee }}.00</strong></div>
+                            <div *ngIf="cart.oldPrice">M.R.P.: <s>{{ cart.oldPrice }}</s></div>
+                        </div>
+                    </div>
+                </mat-card>
+
+                <div class="border"></div>
+            </div>
         </div>
         <div class="sub-total">
             <span class="no-items-span" *ngIf="this.selectedItems === 0">No items selected</span>
-            <h3 *ngIf="this.selectedItems !== 0">Subtotal ( items): 1,05,779.00</h3>
+            <h3 *ngIf="this.selectedItems !== 0">Subtotal ({{ selectedItems }} items): <strong>{{ selectedItemsPrice |
+                    rupee }}.00</strong>
+            </h3>
             <button class="buy-btn">Proceed to Buy</button>
         </div>
     </div>

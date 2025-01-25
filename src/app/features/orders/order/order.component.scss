@@ -1,4 +1,22 @@
 .container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    width: 65%;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.header {
+    align-self: start;
+}
+
+.sub-header h2 {
+    align-self: start;
+}
+
+.sub-header .search-bar {
+    align-self: self-end;
 }
