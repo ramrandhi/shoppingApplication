@@ -1,0 +1,58 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway-service
+
+  cloud:
+    gateway:
+      routes:
+        - id: common-service
+          uri: lb://COMMON-SERVICE
+          predicates:
+            - Path=/api/v1/common/**
+
+        - id: product-service
+          uri: lb://PRODUCT-SERVICE
+          predicates:
+            - Path=/api/v1/product/**
+
+        - id: order-service
+          uri: lb://ORDER-SERVICE
+          predicates:
+            - Path=/api/v1/order/**
+
+        - id: eureka-server
+          uri: http://localhost:8079
+          predicates:
+            - Path=/eureka/main
+          filters:
+            - SetPath=/
+
+        - id: eureka-server-static
+          uri: http://localhost:8079
+          predicates:
+            - Path=/eureka/**
+
+# Eureka Configuration
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: ${EUREKA_SERVER:http://localhost:8079/eureka/}
+
+
+# Zipkin Tracing
+management:
+  tracing:
+    sampling:
+      probability: 1.0  # 100% tracing
+
+# Logging
+logging:
+  level:
+    root: info
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.cloud.gateway.route.RouteDefinitionLocator: INFO
