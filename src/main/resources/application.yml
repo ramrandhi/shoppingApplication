@@ -2,12 +2,15 @@ server:
  port: 8082
   
 spring:
+  application:
+    name: product-service
+
   datasource:
     url: jdbc:mysql://localhost:3306/product
     username: hcn
     password: admin@123
     driver-class-name: com.mysql.cj.jdbc.Driver
-    
+
   jpa:
     properties:
       hibernate:
@@ -18,3 +21,18 @@ spring:
           enabled: true
         hbm2ddl:
           auto: update
+
+# Eureka
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8079/eureka/
+
+#Zipkin
+management:
+  tracing:
+    sampling:
+      probability: 1.0  # 100% tracing
+

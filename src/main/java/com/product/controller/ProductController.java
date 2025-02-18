@@ -19,7 +19,7 @@ import com.product.entity.Product;
 import com.product.productservice.ProductService;
 import com.product.repository.ProductRepository;
 @RestController
-@RequestMapping("/v1/product")
+@RequestMapping("/api/v1/product")
 @CrossOrigin(origins = "http://localhost:4200")
 public class ProductController {
 	
@@ -36,7 +36,7 @@ public class ProductController {
 
 
 	@GetMapping("/id/{id}")
-	public Product getProductById(@PathVariable("id") Integer id) throws Exception {
+	public Product getProductById(@PathVariable Integer id) throws Exception {
 		Product product = productService.getProductById(id);
 		if (product == null) {
 			throw new Exception("Indent id : " + id + " not found");
@@ -59,17 +59,17 @@ public class ProductController {
 	}
 
 	@DeleteMapping("/id/{id}")
-	public void deleteIndent(@PathVariable("id") Integer id) throws Exception {
+	public void deleteIndent(@PathVariable Integer id) throws Exception {
 		productService.deleteProductById(id);
 	}
 
 	@DeleteMapping("/delete")
-	public Boolean deleteOrders(@RequestParam(name = "ids") List<Integer> ids) {
+	public Boolean deleteOrders(@RequestParam List<Integer> ids) {
 		return productService.delete(ids);
 	}
 	
 	@GetMapping("/company")
-    public List<String> getAllproductBrands(@RequestParam(name = "company") String company) {
-        return productRepository.getAllUniqueBrands(company);
+    public List<String> getAllproductBrands() {
+        return productRepository.getAllUniqueBrands();
     }
 }

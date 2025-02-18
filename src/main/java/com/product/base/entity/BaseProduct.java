@@ -9,7 +9,7 @@ import jakarta.persistence.MappedSuperclass;
 
 @MappedSuperclass
 @Audited
-public class BaseMobile {
+public class BaseProduct {
 	
 	@Column(name = "NAME", nullable = false)
 	private String name;
@@ -46,6 +46,9 @@ public class BaseMobile {
 	
 	@Column(name = "IMAGE_LOCATION", nullable = false)
 	private String imageLocation;
+
+	@Column(name = "TYPE", nullable = false)
+	private String type;
 
 	public String getName() {
 		return name;
@@ -141,5 +144,14 @@ public class BaseMobile {
 
 	public void setImageLocation(String imageLocation) {
 		this.imageLocation = imageLocation;
+	}
+	
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 }

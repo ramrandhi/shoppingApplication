@@ -11,7 +11,7 @@ import com.product.entity.Product;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Integer>{
 	
-	@Query(value = "SELECT DISTINCT company FROM product where category = :company", nativeQuery = true)
-    public List<String> getAllUniqueBrands(@Param(value = "company") String company);
+	@Query(value = "SELECT DISTINCT BRAND FROM product", nativeQuery = true)
+    public List<String> getAllUniqueBrands();
 
 }
