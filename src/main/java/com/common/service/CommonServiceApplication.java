@@ -2,7 +2,6 @@ package com.common.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication(scanBasePackages= {"com.common.service.*", "com.service"})
 public class CommonServiceApplication {

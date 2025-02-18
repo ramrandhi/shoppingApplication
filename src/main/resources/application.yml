@@ -12,6 +12,8 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
+    hibernate:
+      ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
@@ -19,11 +21,32 @@ spring:
         format_sql: true
         envers:
           enabled: true
-        hbm2ddl:
-          auto: update
     mapping-files:
       - classpath:META-INF/orm.xml
 
   logging:
     pattern:
-      console: "%d{yyyy-MM-dd HH:mm:ss} %-5level [${spring.application.name}] %logger{36} - %msg%n"
+      console: "%d{yyyy-MM-dd HH:mm:ss} %-5level [%{spring.application.name}] %logger{36} - %msg%n"
+
+# Config Server
+  config:
+    import: "optional:configserver:http://localhost:8080/"
+
+# profiles
+  profiles:
+    active:
+    - dev
+
+# Eureka Configuration
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: ${EUREKA_SERVER:http://localhost:8079/eureka/}
+
+# Zipkin Tracing
+management:
+  tracing:
+    sampling:
+      probability: 1.0  # 100% tracing

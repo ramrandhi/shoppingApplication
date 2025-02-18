@@ -13,7 +13,7 @@ import com.common.service.vo.Account;
 import com.common.service.vo.country;
 
 @RestController
-@RequestMapping("/v1/masterData")
+@RequestMapping("/api/v1/common/masterData")
 @CrossOrigin(origins = "http://localhost:4200")
 public class MasterDataController {
 	@Autowired

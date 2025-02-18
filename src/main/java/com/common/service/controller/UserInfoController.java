@@ -23,7 +23,7 @@ import com.common.service.repository.UserInfoRepository;
 
 
 @RestController
-@RequestMapping("/v1/userInfo")
+@RequestMapping("/api/v1/common/userInfo")
 @CrossOrigin(origins = "http://localhost:4200")
 public class UserInfoController {
 	
