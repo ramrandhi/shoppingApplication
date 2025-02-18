@@ -2,6 +2,9 @@ server:
   port: 8083
 
 spring:
+  application:
+    name: order-service
+
   datasource:
     url: jdbc:mysql://localhost:3306/order
     username: hcn
@@ -22,3 +25,53 @@ spring:
           use_jdbc_metadata_defaults: false
     mapping-files:
       - classpath:META-INF/orm.xml
+
+# Eureka
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8079/eureka/
+
+# zipkin
+management:
+  tracing:
+    sampling:
+      probability: 1.0  # 100% tracing
+
+# Actuator
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+  endpoint:
+    health:
+      show-details: always
+  health:
+    circuitbreakers:
+      enabled: true
+
+# Resilience4j
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 5
+        permittedNumberOfCallsInHalfOpenState: 3
+        waitDurationInOpenState: 10s
+        failureRateThreshold: 50
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        slidingWindowType: COUNT_BASED
+    instances:
+      myServiceCircuitBreaker:
+        baseConfig: default
+      jobBreaker:
+        baseConfig: default
+
+
+
+

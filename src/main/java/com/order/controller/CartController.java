@@ -12,29 +12,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.order.entity.Cart;
-import com.order.service.OrderService;
-import com.order.vo.CartitemVo;
-
+import com.order.external.entity.CartAndProductDto;
+import com.order.service.CartService;
 
 @RestController
-@RequestMapping(value="/api/v1/order/order")
+@RequestMapping(value="/api/v1/order/cart")
 @CrossOrigin(origins = "http://localhost:4200")
-public class OrderController {
+public class CartController {
 	
 	@Autowired
-	private OrderService orderService;
+	private CartService cartService;
 	
-	@PostMapping(value="/save")
-	public Cart addToCart(@RequestBody Cart order) {
-		if(order.getOrderNumber() == null || order.getOrderNumber().trim().isBlank()) {
-			order.setOrderNumber(UUID.randomUUID().toString()); 
+	@PostMapping("/save")
+	public Cart saveCartDetails(@RequestBody Cart cart) {
+		if(cart.getOrderNumber() == null || cart.getOrderNumber().trim().isBlank()) {
+			cart.setOrderNumber(UUID.randomUUID().toString()); 
 		}
-		return orderService.addToCart(order);
+		return cartService.saveCartDetails(cart);
 	}
 	
-	@GetMapping(value="/getCartItems")
-	public List<CartitemVo> getCartDetails() {
-		return orderService.getCartDetails();
+	@GetMapping("/cartWithProductDetails")
+	public List<CartAndProductDto> getCartAndproductDetails(){
+		return cartService.getCartAndproductDetails();
 	}
-
 }
